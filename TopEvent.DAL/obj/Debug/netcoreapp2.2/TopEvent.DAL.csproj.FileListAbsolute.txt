@@ -1,0 +1,12 @@
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\bin\Debug\netcoreapp2.2\TopEvent.DAL.deps.json
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\bin\Debug\netcoreapp2.2\TopEvent.DAL.dll
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\bin\Debug\netcoreapp2.2\TopEvent.DAL.pdb
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.csprojAssemblyReference.cache
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.csproj.CoreCompileInputs.cache
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.AssemblyInfoInputs.cache
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.AssemblyInfo.cs
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.dll
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.pdb
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\bin\Debug\netcoreapp2.2\TopEvent.Model.dll
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\bin\Debug\netcoreapp2.2\TopEvent.Model.pdb
+C:\GitHub\VadymBratskyi\TopEvent\TopEvent.DAL\obj\Debug\netcoreapp2.2\TopEvent.DAL.csproj.CopyComplete

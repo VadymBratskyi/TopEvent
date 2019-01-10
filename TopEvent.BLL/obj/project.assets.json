@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\VadymBratskyi\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
+      "projectUniqueName": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
       "projectName": "TopEvent.BLL",
-      "projectPath": "C:\\GitHub\\VadymBratskyi\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
+      "projectPath": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
       "packagesPath": "C:\\Users\\Vadim-PC\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\VadymBratskyi\\TopEvent\\TopEvent.BLL\\obj\\",
+      "outputPath": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

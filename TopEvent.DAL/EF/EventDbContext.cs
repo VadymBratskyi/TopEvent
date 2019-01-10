@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TopEvent.Model.Models;
 
 namespace TopEvent.DAL.EF
 {
-    public sealed class EventDbContext : DbContext
+    public sealed class EventDbContext : IdentityDbContext<User, IdentityRole<Guid>,Guid>
     {
         public EventDbContext(DbContextOptions<EventDbContext> options) : base(options)
         {

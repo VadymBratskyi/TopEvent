@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent", "TopEvent.csproj", "{AEE43FEF-A8F0-433D-909E-A7E714C80F78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopEvent.DAL", "..\TopEvent.DAL\TopEvent.DAL.csproj", "{F43654B9-989C-4FF8-8380-2D802A9C5FD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent.DAL", "..\TopEvent.DAL\TopEvent.DAL.csproj", "{F43654B9-989C-4FF8-8380-2D802A9C5FD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopEvent.Model", "..\TopEvent.Model\TopEvent.Model.csproj", "{56F877AB-0F29-45D3-A3ED-DC186DCD4DF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent.Model", "..\TopEvent.Model\TopEvent.Model.csproj", "{56F877AB-0F29-45D3-A3ED-DC186DCD4DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopEvent.BLL", "..\TopEvent.BLL\TopEvent.BLL.csproj", "{0AAE4492-188C-43E0-8658-545CE8810ABB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent.BLL", "..\TopEvent.BLL\TopEvent.BLL.csproj", "{0AAE4492-188C-43E0-8658-545CE8810ABB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

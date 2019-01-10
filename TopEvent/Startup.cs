@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TopEvent.DAL.EF;
 using TopEvent.DAL.Repositories;
+using TopEvent.Model.Models;
 
 namespace TopEvent
 {
@@ -30,6 +31,9 @@ namespace TopEvent
             });
 
             services.AddScoped<EfUnitOfWork>();
+
+            services.AddDefaultIdentity<User>()
+                .AddEntityFrameworkStores<EventDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
@@ -57,6 +61,8 @@ namespace TopEvent
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

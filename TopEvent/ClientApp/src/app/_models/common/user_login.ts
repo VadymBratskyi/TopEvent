@@ -1,6 +1,6 @@
 export class LoginViewModel {
-  email: string;
-  password: string;
-  rememberMe: boolean;
-  returnUrl: string;
+  public email: string;
+  public password: string;
+  public rememberMe: boolean;
+  public returnUrl: string;
 }

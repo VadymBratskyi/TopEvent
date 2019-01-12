@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TopEvent.Model.ViewModels
 {
-    class RegisterViewModel
+    public class RegisterViewModel
     {
         [Required]
         public string Email { get; set; }
@@ -21,6 +21,9 @@ namespace TopEvent.Model.ViewModels
 
         [Required]
         public DateTime Birthday { get; set; }
+
+        [Required]
+        public string Phonenumber { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

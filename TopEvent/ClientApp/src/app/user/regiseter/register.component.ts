@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from "../../_services/user.services";
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,7 @@ export class RegisterComponent implements OnInit {
   loading = false;
 
   constructor(
+    private serUser: UserService,
     private router: Router
   ) { }
 
@@ -20,17 +22,15 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    //this.loading = true;
-    //this.userService.create(this.model)
-    //  .subscribe(
-    //    data => {
-    //      this.alertService.success('Registration successful', true);
-    //      this.router.navigate(['/login']);
-    //    },
-    //    error => {
-    //      this.alertService.error(error);
-    //      this.loading = false;
-    //    });
+    this.loading = true;
+    this.serUser.register(this.model).subscribe(data => {
+       //  this.alertService.success('Registration successful', true);
+          this.router.navigate(['/fetch-data']);
+        },
+      error => {
+        //  this.alertService.error(error);
+          this.loading = false;
+        });
   }
 
 }

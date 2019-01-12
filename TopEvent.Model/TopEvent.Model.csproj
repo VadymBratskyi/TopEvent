@@ -20,4 +20,12 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ViewModels\LoginViewModel.cs.d.ts">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LoginViewModel.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -6,6 +6,7 @@ import {
   RegisterComponent,
   UserRouterModule
 } from "./user.barel";
+import { UserService } from "../_services/user.services";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import {
     FormsModule,
     UserRouterModule
   ],
-  providers: [],
+  providers: [UserService],
 })
 export class UserModule {
 

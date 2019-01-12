@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent.Model", "..\TopEve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopEvent.BLL", "..\TopEvent.BLL\TopEvent.BLL.csproj", "{0AAE4492-188C-43E0-8658-545CE8810ABB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopEvent.Common", "..\TopEvent.Common\TopEvent.Common.csproj", "{F901EFC0-8ED3-42C6-8225-C0A0958ACD54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0AAE4492-188C-43E0-8658-545CE8810ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AAE4492-188C-43E0-8658-545CE8810ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AAE4492-188C-43E0-8658-545CE8810ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F901EFC0-8ED3-42C6-8225-C0A0958ACD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F901EFC0-8ED3-42C6-8225-C0A0958ACD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F901EFC0-8ED3-42C6-8225-C0A0958ACD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F901EFC0-8ED3-42C6-8225-C0A0958ACD54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

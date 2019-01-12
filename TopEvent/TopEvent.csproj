@@ -49,6 +49,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TopEvent.Common\TopEvent.Common.csproj" />
     <ProjectReference Include="..\TopEvent.DAL\TopEvent.DAL.csproj" />
   </ItemGroup>
 

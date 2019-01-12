@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TopEvent.Model.Models;
 using TopEvent.DAL.Repositories;
 
@@ -10,6 +11,6 @@ namespace TopEvent.DAL.Interfaces
     {
         EntityRepository<Client> Clients { get; }
         EntityRepository<Event> Events { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

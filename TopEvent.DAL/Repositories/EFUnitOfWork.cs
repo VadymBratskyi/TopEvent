@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using TopEvent.DAL.EF;
 using TopEvent.DAL.Interfaces;
 using TopEvent.Model.Models;
@@ -30,9 +31,9 @@ namespace TopEvent.DAL.Repositories
         }
 
 
-        public void Save()
+        public async Task SaveAsync()
         {
-            _db.SaveChanges();
+            await _db.SaveChangesAsync();
         }
 
         private bool _disposed;

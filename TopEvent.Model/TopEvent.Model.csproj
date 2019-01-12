@@ -9,4 +9,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Models\User.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>User.cs.d.ts</LastGenOutput>
+    </Compile>
+    <Compile Update="ViewModels\LoginViewModel.cs">
+      <Generator>DtsGenerator</Generator>
+      <LastGenOutput>LoginViewModel.cs.d.ts</LastGenOutput>
+    </Compile>
+  </ItemGroup>
+
 </Project>

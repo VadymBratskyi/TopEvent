@@ -11,7 +11,16 @@ namespace TopEvent.Model.ViewModels
         public string Email { get; set; }
 
         [Required]
-        public int Year { get; set; }
+        public string Name { get; set; }
+
+        [Required]
+        public string Thurname { get; set; }
+
+        [Required]
+        public string Patronymic { get; set; }
+
+        [Required]
+        public DateTime Birthday { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

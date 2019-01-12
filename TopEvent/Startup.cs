@@ -27,7 +27,7 @@ namespace TopEvent
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<EventDbContext>(options =>
             {
-                options.UseSqlServer(connection);
+                options.UseSqlServer(connection, b => b.MigrationsAssembly("TopEventMigration"));
             });
 
             services.AddScoped<EfUnitOfWork>();

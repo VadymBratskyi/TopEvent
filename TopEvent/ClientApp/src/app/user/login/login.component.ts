@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserLogin } from "../../_models/common/user_login"
+import { AuthenticationService } from "../../_services/athentication.service"
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -7,8 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  ngOnInit() {
+  model: UserLogin;
+  loading = false;
 
+  constructor(
+    private servAuthentication: AuthenticationService,
+    private routerActivated: ActivatedRoute,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    this.model = new UserLogin();
   }
+
+  login() {
+    this.loading = true;
+    this.model.returnUrl = this.routerActivated.snapshot.queryParams['returnUrl'] || '/';
+    this.servAuthentication.login(this.model).subscribe((router:UserLogin) => {
+      console.log(router);
+        this.loading = false;
+        this.router.navigate([router.returnUrl]);
+      },
+      error => {
+        console.error('Error',error);
+        this.loading = false;
+      });
+  }
+
 
 }

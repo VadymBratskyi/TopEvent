@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 import { User } from "../_models/User";
 import { UserRegister } from "../_models/common/user_register";
+import { UserLogin } from "../_models/common/user_login";
 import { Client } from "../_models/Client";
+
 
 @Injectable()
 export class UserService {
@@ -10,15 +13,15 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<Client[]>('/api/Account/GetClients');
+    return this.http.get<User[]>('/api/users');
   }
 
   getById(id: number) {
     return this.http.get('/api/users/' + id);
   }
 
-  register(user: UserRegister) {
-    return this.http.post('/api/Account/Register', user);
+  create(user: User) {
+    return this.http.post('/api/users', user);
   }
 
   update(user: User) {

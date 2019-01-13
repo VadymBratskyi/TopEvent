@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var LoginViewModel = /** @class */ (function () {
-    function LoginViewModel() {
+var UserLogin = /** @class */ (function () {
+    function UserLogin() {
     }
-    return LoginViewModel;
+    return UserLogin;
 }());
-exports.LoginViewModel = LoginViewModel;
+exports.UserLogin = UserLogin;
 //# sourceMappingURL=user_login.js.map

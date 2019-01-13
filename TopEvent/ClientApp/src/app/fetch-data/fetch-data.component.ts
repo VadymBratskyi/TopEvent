@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from "../_services/user.services";
+import { ClientService } from "../_services/client.services";
 import { Client } from "../_models/Client";
 @Component({
   selector: 'app-fetch-data',
@@ -9,12 +9,12 @@ export class FetchDataComponent implements OnInit{
 
   public forecasts: Client[];
 
-  constructor(private serUser: UserService) {
+  constructor(private serClient: ClientService) {
    
   }
 
   ngOnInit() {
-    this.serUser.getAll().subscribe(result => {
+    this.serClient.getAll().subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }

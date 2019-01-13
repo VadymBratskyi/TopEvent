@@ -69,10 +69,12 @@ namespace TopEvent.Controllers
                 return BadRequest(ModelState);
             }
 
+
+
             return Ok(model);
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Login([FromBody]LoginViewModel model)
         {
             if (ModelState.IsValid)
@@ -83,7 +85,7 @@ namespace TopEvent.Controllers
                 {
                     if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
                     {
-                        return Json(model.ReturnUrl);
+                        return Json(model);
                     }
                 }
                 else
@@ -95,7 +97,15 @@ namespace TopEvent.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             return Ok(model);
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return Json("succes out");
         }
     }
 }

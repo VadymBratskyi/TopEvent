@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from "../../_services/user.services";
+import { AuthenticationService } from "../../_services/athentication.service"
+import { UserRegister } from "../../_models/common/user_register"
 
 @Component({
   selector: 'app-register',
@@ -9,26 +10,25 @@ import { UserService } from "../../_services/user.services";
 })
 export class RegisterComponent implements OnInit {
 
-  model: any = {};
+  model: UserRegister;
   loading = false;
 
   constructor(
-    private serUser: UserService,
+    private servAuthentication: AuthenticationService,
     private router: Router
   ) { }
 
   ngOnInit() {
-    
+    this.model = new UserRegister();
   }
 
   register() {
     this.loading = true;
-    this.serUser.register(this.model).subscribe(data => {
-       //  this.alertService.success('Registration successful', true);
+    this.servAuthentication.register(this.model).subscribe(data => {
           this.router.navigate(['/fetch-data']);
         },
       error => {
-        //  this.alertService.error(error);
+        console.error('Error', error);
           this.loading = false;
         });
   }

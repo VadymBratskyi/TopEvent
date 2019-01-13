@@ -41,10 +41,19 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\app.barel.ts" />
     <None Remove="ClientApp\src\app\app.routing.module.ts" />
+    <None Remove="ClientApp\src\app\client\client.barel.ts" />
+    <None Remove="ClientApp\src\app\client\client.module.ts" />
+    <None Remove="ClientApp\src\app\client\client.routing.ts" />
+    <None Remove="ClientApp\src\app\models.barel.ts" />
+    <None Remove="ClientApp\src\app\mteril.brel.ts" />
+    <None Remove="ClientApp\src\app\user\authentication\authentication.component.ts" />
+    <None Remove="ClientApp\src\app\_guards\auth.guard.ts" />
     <None Remove="ClientApp\src\app\_models\client.ts" />
     <None Remove="ClientApp\src\app\_models\common\user_login.ts" />
     <None Remove="ClientApp\src\app\_models\User.ts" />
     <None Remove="ClientApp\src\app\_models\user_register.ts" />
+    <None Remove="ClientApp\src\app\_services\athentication.service.ts" />
+    <None Remove="ClientApp\src\app\_services\client.services.ts" />
     <None Remove="ClientApp\src\app\_services\user.services.ts" />
   </ItemGroup>
 
@@ -56,10 +65,19 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\app.routing.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\app.barel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\client\client.barel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\client\client.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\client\client.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\models.barel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\mteril.brel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\user\authentication\authentication.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_guards\auth.guard.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\Client.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user_login.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user_register.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\User.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_services\athentication.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_services\client.services.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_services\user.services.ts" />
   </ItemGroup>
 

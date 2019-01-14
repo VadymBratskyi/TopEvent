@@ -54,7 +54,8 @@ namespace TopEvent.Controllers
                         Name = model.Name,
                         Thurname = model.Thurname,
                         Patronymic = model.Patronymic,
-                        Birthday = model.Birthday
+                        Birthday = model.Birthday,
+                        User = user
                     };
                     uw.Clients.Created(client);
                     await uw.SaveAsync();
@@ -68,8 +69,6 @@ namespace TopEvent.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-
 
             return Ok(model);
         }

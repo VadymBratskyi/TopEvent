@@ -1,15 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { User } from "../_models/User";
-import { UserRegister } from "../_models/common/user_register";
-import { UserLogin } from "../_models/common/user_login";
-import { Client } from "../_models/Client";
+
 
 
 @Injectable()
 export class UserService {
 
+  private CurrentUser: User;
+
+  get GetCurrentUser() {
+    if (!this.CurrentUser && localStorage.getItem("currentUser")) {
+      let strUser = JSON.parse(localStorage.getItem("currentUser"));
+      this.CurrentUser = new User(strUser.email);
+      return this.CurrentUser;
+    }    
+    return this.CurrentUser;
+  }
+
+  set SetCurrentUser(value: any) {
+    if (value) {
+      let strUser = JSON.parse(value);
+      this.CurrentUser = new User(strUser.email);
+    }
+    else {
+      this.CurrentUser = null;
+    }    
+  }
+   
   constructor(private http: HttpClient) { }
 
   getAll() {

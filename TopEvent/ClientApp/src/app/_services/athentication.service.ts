@@ -3,12 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { UserRegister } from "../_models/common/user_register";
 import { UserLogin } from "../_models/common/user_login";
+import { UserService } from './user.services';
 
 
 @Injectable()
 export class AuthenticationService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private servUser: UserService,
+    private http: HttpClient) { }
 
   
   register(user: UserRegister) {
@@ -41,6 +44,7 @@ export class AuthenticationService {
         map(out => {
           // remove user from local storage to log user out
           localStorage.removeItem('currentUser');
+          this.servUser.SetCurrentUser = null;
           return out;
         })
       );

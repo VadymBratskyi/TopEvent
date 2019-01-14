@@ -23,8 +23,10 @@ import {
   MatToolbarModule,
   MatIconModule,
   MatSidenavModule,
-  MatListModule
+  MatListModule,
+  MatInputModule
   } from "./mteril.brel";
+import { MatMenuModule } from '@angular/material';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import {
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatMenuModule
   ],
   providers: [ClientService, AuthGuard],
   bootstrap: [AppComponent]

@@ -20,4 +20,9 @@ export class User {
 
   public client: Client; 
 
+  constructor(username: string) {
+    this.email = username;
+    this.userName = username;
+  }
+
 }

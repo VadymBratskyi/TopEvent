@@ -12,35 +12,32 @@
         <span class="example-spacer"></span>
 
         <button mat-icon-button [matMenuTriggerFor]="message">
-          <mat-icon aria-label="Example icon-button with a heart icon" matBadge="5" matBadgeColor="accent">message</mat-icon>
+          <mat-icon aria-label="Your messges" matBadge="6" matBadgeColor="accent">email</mat-icon>
         </button>
 
         <mat-menu #message="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
+          <nav-menu-messages-card></nav-menu-messages-card>
         </mat-menu>
 
         <button mat-icon-button [matMenuTriggerFor]="notifications">
-          <mat-icon aria-label="Example icon-button with a heart icon" matBadge="15" matBadgeColor="warn">notifications</mat-icon>
+          <mat-icon aria-label="Your notifications" matBadge="4" matBadgeColor="warn">notifications</mat-icon>
         </button>
 
         <mat-menu #notifications="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
+          <nav-menu-notifications-card></nav-menu-notifications-card>
         </mat-menu>
         
         <button mat-icon-button [matMenuTriggerFor]="userMenu">
-          <!--<mat-icon aria-label="Example icon-button with a heart icon">person</mat-icon>-->
-          <img src="assets/images/vados.jpg" style="width:35px; height:35px; border-radius: 100px;" />
+          <mat-icon *ngIf="!servUser.GetCurrentUser" aria-label="Anonimn user" >person</mat-icon>
+          <img *ngIf="servUser.GetCurrentUser" src="assets/images/vados.jpg" style="width:35px; height:35px; border-radius: 100px;" />
         </button>
 
-        <mat-menu #userMenu="matMenu">
-          <button mat-menu-item>Item 1</button>
-          <button mat-menu-item>Item 2</button>
+        <mat-menu #userMenu="matMenu" >
+          <nav-menu-user-card></nav-menu-user-card>
         </mat-menu>
 
         <button mat-icon-button (click)="settings.toggle()">
-          <mat-icon aria-label="Example icon-button with a heart icon">settings</mat-icon>
+          <mat-icon aria-label="Settings">settings</mat-icon>
         </button>
 
         <!--<span *ngIf="servUser.GetCurrentUser">{{servUser.GetCurrentUser.userName}}</span>-->
@@ -56,8 +53,6 @@
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/counter"]'>Counter</a>
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/fetch-data"]'>Fetch data</a>
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/user","register"]'>Register</a>
-          <a mat-list-item class="nav-link text-dark" [routerLink]='["/user","login"]'>Login</a>
-          <a mat-list-item class="nav-link text-dark" (click)="logOut()">LogOut</a>
         </mat-nav-list>
       </mat-sidenav>
 

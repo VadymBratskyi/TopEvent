@@ -18,12 +18,5 @@ export class NavMenuComponent {
     private router: Router) {
   }
     
-   
-  logOut() {
-    this.servAuthentication.logout().subscribe(rez => {
-      this.router.navigate(['/user', 'login']);
-    });
-  }
-
 }
 

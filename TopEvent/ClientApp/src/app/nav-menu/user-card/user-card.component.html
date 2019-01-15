@@ -1,0 +1,29 @@
+<mat-card class="text-center">
+  <img src="assets/images/profile-bg.jpg" class="mat-card-image"/>
+  <mat-card-content>
+    <div class="pro-img">
+      <img alt="user" src="{{servUser.GetCurrentUser ? 'assets/images/vados.jpg' : 'assets/images/unknownUser.png'}}" width="100">
+    </div>
+    <h3 class="m-b-0">{{servUser.GetCurrentUser ? servUser.GetCurrentUser.userName : 'User Name'}}</h3>
+    <h6 class="m-t-0 ">{{servUser.GetCurrentUser ? servUser.GetCurrentUser.email : 'User Email'}}</h6>
+    <div class="row m-t-30" *ngIf="servUser.GetCurrentUser">
+      <div class="col-md-4">
+        <h5>1099</h5>
+        <small>Events</small>
+      </div>
+      <div class="col-md-4">
+        <h5>23.469</h5>
+        <small>Followers</small>
+      </div>
+      <div class="col-md-4">
+        <h5>6035</h5>
+        <small>Likes</small>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>PROFILE</button>
+    <button mat-button *ngIf="servUser.GetCurrentUser" (click)="signOut()">SIGN OUT</button>
+    <button mat-button *ngIf="!servUser.GetCurrentUser" [routerLink]='["/user","login"]'>SIGN IN</button>
+  </mat-card-actions>
+</mat-card>

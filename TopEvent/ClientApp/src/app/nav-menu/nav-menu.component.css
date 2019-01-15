@@ -44,3 +44,7 @@ h1.example-app-name {
   max-width: 500px;
   width: 100%;
 }
+
+.navItems {
+  padding: 0 10px;
+}

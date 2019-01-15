@@ -1,4 +1,3 @@
-export { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export {
   MatAutocompleteModule,
   MatBadgeModule,

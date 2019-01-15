@@ -2,8 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var app_component_1 = require("./app.component");
 exports.AppComponent = app_component_1.AppComponent;
-var nav_menu_component_1 = require("./nav-menu/nav-menu.component");
-exports.NavMenuComponent = nav_menu_component_1.NavMenuComponent;
 var home_component_1 = require("./home/home.component");
 exports.HomeComponent = home_component_1.HomeComponent;
 var counter_component_1 = require("./counter/counter.component");
@@ -14,4 +12,6 @@ var app_routing_module_1 = require("./app.routing.module");
 exports.AppRouterModule = app_routing_module_1.AppRouterModule;
 var user_module_1 = require("./user/user.module");
 exports.UserModule = user_module_1.UserModule;
+var nav_menu_module_1 = require("./nav-menu/nav-menu.module");
+exports.NavMenuModule = nav_menu_module_1.NavMenuModule;
 //# sourceMappingURL=app.barel.js.map

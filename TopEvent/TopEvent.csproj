@@ -46,6 +46,7 @@
     <None Remove="ClientApp\src\app\client\client.routing.ts" />
     <None Remove="ClientApp\src\app\models.barel.ts" />
     <None Remove="ClientApp\src\app\mteril.brel.ts" />
+    <None Remove="ClientApp\src\app\nav-menu\nav-menu.module.ts" />
     <None Remove="ClientApp\src\app\user\authentication\authentication.component.ts" />
     <None Remove="ClientApp\src\app\_guards\auth.guard.ts" />
     <None Remove="ClientApp\src\app\_models\client.ts" />
@@ -70,6 +71,7 @@
     <TypeScriptCompile Include="ClientApp\src\app\client\client.routing.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models.barel.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\mteril.brel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\nav-menu\nav-menu.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\user\authentication\authentication.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_guards\auth.guard.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\Client.ts" />

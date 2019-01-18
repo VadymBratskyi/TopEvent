@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { UserRegister } from "../_models/common/user_register";
-import { UserLogin } from "../_models/common/user_login";
+import { UserRegister, UserLogin } from "../models.barel";
 import { UserService } from './user.services';
 
 

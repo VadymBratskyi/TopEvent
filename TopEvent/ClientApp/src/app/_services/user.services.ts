@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from "../_models/User";
+import { User } from "../models.barel";
 
 
 

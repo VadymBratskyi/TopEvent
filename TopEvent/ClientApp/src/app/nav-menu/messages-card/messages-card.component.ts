@@ -1,19 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavMessageItem } from '../../models.barel';
 
 @Component({
   selector: 'nav-menu-messages-card',
   templateUrl: './messages-card.component.html',
   styleUrls: ['./messages-card.component.css']
 })
-export class NavMenuMessageCardComponent {
+export class NavMenuMessageCardComponent implements OnInit {
 
-  searchValue: string;
+  messages: any[];  
 
   constructor(
     private router: Router) {
   }
 
+  ngOnInit() {
+    this.messages = [];
+    for (let i = 0; i < 6; i++) {
+      let note = new NavMessageItem();
+      note.fromUser = "User_" + i;
+      note.message = "Message_" + i;
+      note.time = new Date();      
+      this.messages.push(note);
+    }
+  }
 
 }
 

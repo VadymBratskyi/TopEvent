@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from "../_services/athentication.service"
 import { UserService } from "../_services/user.services"
- 
+
+
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
@@ -16,6 +17,7 @@ export class NavMenuComponent {
   private servAuthentication: AuthenticationService,
     private servUser: UserService,
     private router: Router) {
+   
   }
     
 }

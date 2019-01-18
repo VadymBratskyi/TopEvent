@@ -7,10 +7,10 @@
           <mat-icon>menu</mat-icon>
         </button>
 
-        <h1 class="example-app-name">TopEvent</h1>
+        <h1 class="example-app-name mdl-layout-title">TopEvent</h1>
 
         <span class="example-spacer"></span>
-
+        
         <button mat-icon-button [matMenuTriggerFor]="message">
           <mat-icon aria-label="Your messges" matBadge="6" matBadgeColor="accent">email</mat-icon>
         </button>
@@ -26,13 +26,13 @@
         <mat-menu #notifications="matMenu">
           <nav-menu-notifications-card></nav-menu-notifications-card>
         </mat-menu>
-        
+
         <button mat-icon-button [matMenuTriggerFor]="userMenu">
-          <mat-icon *ngIf="!servUser.GetCurrentUser" aria-label="Anonimn user" >person</mat-icon>
+          <mat-icon *ngIf="!servUser.GetCurrentUser" aria-label="Anonimn user">person</mat-icon>
           <img *ngIf="servUser.GetCurrentUser" src="assets/images/vados.jpg" style="width:35px; height:35px; border-radius: 100px;" />
         </button>
 
-        <mat-menu #userMenu="matMenu" >
+        <mat-menu #userMenu="matMenu">
           <nav-menu-user-card></nav-menu-user-card>
         </mat-menu>
 
@@ -41,7 +41,7 @@
         </button>
 
         <!--<span *ngIf="servUser.GetCurrentUser">{{servUser.GetCurrentUser.userName}}</span>-->
-        
+
       </mat-toolbar-row>
     </mat-toolbar>
 
@@ -52,7 +52,6 @@
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/counter"]'>Counter</a>
           <a mat-list-item class="nav-link text-dark" [routerLink]='["/fetch-data"]'>Fetch data</a>
-          <a mat-list-item class="nav-link text-dark" [routerLink]='["/user","register"]'>Register</a>
         </mat-nav-list>
       </mat-sidenav>
 
@@ -73,37 +72,3 @@
     </mat-sidenav-container>
   </div>
 </header>
-
-<!--<header>
-  <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3'>
-    <div class="container">
-      <a class="navbar-brand" [routerLink]='["/"]'>TopEvent</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded" (click)="toggle()">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
-        <ul class="navbar-nav flex-grow">
-          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-            <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/counter"]'>Counter</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/fetch-data"]'>Fetch data</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/user","register"]'>Register</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/user","login"]'>Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark" (click)="logOut()">LogOut</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>-->

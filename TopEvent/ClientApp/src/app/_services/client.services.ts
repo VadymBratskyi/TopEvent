@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from "../_models/User";
-import { Client } from "../_models/Client";
+import { User, Client } from "../models.barel";
 
 @Injectable()
 export class ClientService {

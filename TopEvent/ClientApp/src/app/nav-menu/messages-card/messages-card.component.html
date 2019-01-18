@@ -1,13 +1,13 @@
 <mat-card class="example-card">
-  <mat-card-header>
+  <mat-card-header style="border-bottom: 1px solid lightgray">
     <mat-card-title>You have 6 messages</mat-card-title>
   </mat-card-header>
-  <mat-card-content>
-    <p>
-      <!--<nav-menu-notification></nav-menu-notification>-->
-    </p>
+  <mat-card-content class="messContent">
+    <mat-list>
+      <nav-menu-message-item *ngFor="let mess of messages" [inNavMessageItem]="mess"></nav-menu-message-item>
+    </mat-list>
   </mat-card-content>
-  <mat-card-actions class="text-center">
+  <mat-card-actions class="text-center" style="border-top: 1px solid lightgray">
     <button mat-button>view all</button>
   </mat-card-actions>
 </mat-card>

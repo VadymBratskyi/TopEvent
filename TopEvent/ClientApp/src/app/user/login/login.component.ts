@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserLogin } from "../../_models/common/user_login"
+import { UserLogin } from "../../models.barel"
 import { AuthenticationService } from "../../_services/athentication.service"
 import { Router, ActivatedRoute } from "@angular/router";
 

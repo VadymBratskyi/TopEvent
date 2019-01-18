@@ -7,7 +7,8 @@ import {
   NavMenuMessageCardComponent,
   NavMenuNotificationsrCardComponent,
   NavMenuUserCardComponent,
-  NavMenuNotificationComponent
+  NavMenuNotificationItemComponent,
+  NavMenuMessageItemComponent
   } from "./nav-menu.barel";
 
 import {
@@ -20,7 +21,8 @@ import {
   MatInputModule,
   MatMenuModule,
   MatBadgeModule,
-  MatCardModule
+  MatCardModule,
+  MatExpansionModule
   } from "../mteril.brel";
 
 
@@ -30,7 +32,8 @@ import {
     NavMenuMessageCardComponent,
     NavMenuNotificationsrCardComponent,
     NavMenuUserCardComponent,
-    NavMenuNotificationComponent
+    NavMenuNotificationItemComponent,
+    NavMenuMessageItemComponent
   ],
   imports: [ 
     RouterModule,
@@ -46,7 +49,8 @@ import {
     MatInputModule,
     MatMenuModule,
     MatBadgeModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   exports: [NavMenuComponent]
 })

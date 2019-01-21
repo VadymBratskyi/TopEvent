@@ -69,7 +69,7 @@ namespace TopEvent.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            
             return Ok(model);
         }
 

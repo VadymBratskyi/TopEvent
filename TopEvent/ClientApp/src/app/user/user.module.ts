@@ -7,14 +7,20 @@ import { AuthenticationService } from "../_services/athentication.service";
 import {
   LoginComponent,
   RegisterComponent,
-  UserRouterModule
+  UserRouterModule,
+  UserManagerAddComponent,
+  UserManagerComponent,
+  UserManagerEditComponent
 } from "./user.barel";
 
 
 @NgModule({
   declarations: [
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    UserManagerAddComponent,
+    UserManagerComponent,
+    UserManagerEditComponent
   ],
   imports: [
     BrowserModule,

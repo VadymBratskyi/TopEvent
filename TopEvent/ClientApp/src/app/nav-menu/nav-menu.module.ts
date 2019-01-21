@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import {
@@ -8,7 +9,9 @@ import {
   NavMenuNotificationsrCardComponent,
   NavMenuUserCardComponent,
   NavMenuNotificationItemComponent,
-  NavMenuMessageItemComponent
+  NavMenuMessageItemComponent,
+  SidenavProfileComponent,
+  SidenavListComponent
   } from "./nav-menu.barel";
 
 import {
@@ -23,7 +26,7 @@ import {
   MatBadgeModule,
   MatCardModule,
   MatExpansionModule
-  } from "../mteril.brel";
+  } from "../materil.barel";
 
 
 @NgModule({
@@ -33,11 +36,14 @@ import {
     NavMenuNotificationsrCardComponent,
     NavMenuUserCardComponent,
     NavMenuNotificationItemComponent,
-    NavMenuMessageItemComponent
+    NavMenuMessageItemComponent,
+    SidenavProfileComponent,
+    SidenavListComponent
   ],
   imports: [ 
     RouterModule,
     BrowserModule,
+    BrowserAnimationsModule,
 
     /*materil modules*/
     MatButtonModule,

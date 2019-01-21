@@ -3,6 +3,7 @@ import { Route, RouterModule } from "@angular/router";
 
 import { RegisterComponent } from "./regiseter/register.component";
 import { LoginComponent } from "./login/login.component";
+import { UserManagerComponent } from "./user-manager/user-manager.component";
 
 const router: Route[] = [
   {
@@ -10,6 +11,9 @@ const router: Route[] = [
       { path: 'register', component: RegisterComponent },
       { path: 'login', component: LoginComponent }
     ]
+  },
+  {
+    path: "ourusers", component: UserManagerComponent 
   }
 ];
 

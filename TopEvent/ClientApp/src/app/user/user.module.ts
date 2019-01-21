@@ -13,6 +13,9 @@ import {
   UserManagerEditComponent
 } from "./user.barel";
 
+import {
+  MatTableModule
+  } from "../materil.barel"
 
 @NgModule({
   declarations: [
@@ -25,7 +28,9 @@ import {
   imports: [
     BrowserModule,
     FormsModule,
-    UserRouterModule
+    UserRouterModule,
+
+    MatTableModule
   ],
   providers: [UserService, AuthenticationService],
 })

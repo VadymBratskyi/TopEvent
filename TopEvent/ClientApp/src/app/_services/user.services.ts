@@ -31,22 +31,22 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<User[]>('/api/users');
+    return this.http.get<User[]>('/api/Users/GetAll');
   }
 
-  getById(id: number) {
-    return this.http.get('/api/users/' + id);
+  getById(id: string) {
+    return this.http.get('/api/Users/GetById?userId=' + id);
   }
 
   create(user: User) {
-    return this.http.post('/api/users', user);
+    return this.http.post('/api/Users/Create', user);
   }
 
   update(user: User) {
-    return this.http.put('/api/users/' + user.id, user);
+    return this.http.post('/api/Users/Edit', user);
   }
 
-  delete(id: number) {
-    return this.http.delete('/api/users/' + id);
+  delete(id: string) {
+    return this.http.delete('/api/Users/Delete?userId=' + id);
   }
 }

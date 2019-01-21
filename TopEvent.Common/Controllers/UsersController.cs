@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TopEvent.DAL.Repositories;
 using TopEvent.Model.Models;
 using TopEvent.Model.ViewModels;
@@ -14,21 +15,22 @@ namespace TopEvent.Controllers
     [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
     //[Authorize(Roles = "BossVados")]
-    public class UserController : Controller
+    public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;
         public EfUnitOfWork uw;
 
-        private UserController(UserManager<User> userManager, EfUnitOfWork efUnit) {
+        public UsersController(UserManager<User> userManager, EfUnitOfWork efUnit) {
             _userManager = userManager;
             uw = efUnit;
         }
 
 
         [HttpGet("[action]")]
-        public IActionResult GetAll()
+        public async  Task<IActionResult> GetAll()
         {
-            return Ok(_userManager.Users);
+            var data = await _userManager.Users.ToListAsync();
+            return Ok(data);
         }
 
         [HttpGet("[action]")]

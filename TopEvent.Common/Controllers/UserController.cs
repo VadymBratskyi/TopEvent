@@ -101,7 +101,7 @@ namespace TopEvent.Controllers
             }
         }
 
-        [HttpPost("[acrion]")]
+        [HttpPost("[action]")]
         public async Task<IActionResult> Delete(Guid userId) {
 
             if (userId != Guid.Empty) {

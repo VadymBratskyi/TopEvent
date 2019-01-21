@@ -1,0 +1,14 @@
+<div class="user-profile" style="background: url(assets/images/user-info.jpg) no-repeat">
+  <div class="profile-img">
+    <img alt="user" src="assets/images/vados.jpg">
+  </div>
+  <div class="profile-text">
+    <a aria-haspopup="true" [matMenuTriggerFor]="menu"> Markarn Doe <mat-icon>expand_more</mat-icon></a>
+  </div>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item><mat-icon>settings</mat-icon> Settings</button>
+    <button mat-menu-item><mat-icon>account_box</mat-icon> Profile</button>
+    <button mat-menu-item><mat-icon>notifications_offx</mat-icon> Disable notifications </button>
+    <button mat-menu-item><mat-icon>exit_to_app</mat-icon> Sign Out</button>
+  </mat-menu>
+</div>

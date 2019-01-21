@@ -26,8 +26,30 @@ namespace TopEvent.Controllers
 
 
         [HttpGet("[action]")]
-        public IActionResult Users() {
+        public IActionResult GetAll()
+        {
             return Ok(_userManager.Users);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetById(Guid userId)
+        {
+            if (userId != Guid.Empty)
+            {
+                var user = await _userManager.FindByIdAsync(userId.ToString());
+                if (user != null)
+                {
+                    return Ok(user);
+                }
+                else
+                {
+                    return NotFound(userId);
+                }
+
+            }
+
+            return BadRequest(new { errorMessage = "Can't find. User id is Empty" });
+
         }
 
         [HttpPost("[action]")]

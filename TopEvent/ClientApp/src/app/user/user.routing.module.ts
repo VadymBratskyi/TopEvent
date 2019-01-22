@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from "@angular/router";
+import { AuthGuard } from '../_guards/auth.guard';
+import {
+  LoginComponent,
+  RegisterComponent,
+  UserListComponent,
+  UserAddComponent,
+  UserEditComponent
+} from "./user.barel";
 
-import { RegisterComponent } from "./regiseter/register.component";
-import { LoginComponent } from "./login/login.component";
-import { UserManagerComponent } from "./user-manager/user-manager.component";
 
 const router: Route[] = [
   {
-    path: "user", children: [
+    path: "users",
+    children: [
       { path: 'register', component: RegisterComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'login', component: LoginComponent },
+      { path: 'list', component: UserListComponent, canActivate: [AuthGuard] },
+      { path: 'create', component: UserAddComponent, canActivate: [AuthGuard] },
+      { path: 'edit/:userId', component: UserEditComponent, canActivate: [AuthGuard] }
     ]
-  },
-  {
-    path: "ourusers", component: UserManagerComponent 
-  }
+  }  
 ];
 
 

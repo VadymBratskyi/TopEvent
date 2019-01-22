@@ -20,7 +20,7 @@ export class NavMenuUserCardComponent {
 
   signOut() {
     this.servAuthentication.logout().subscribe(rez => {
-      this.router.navigate(['/user', 'login']);
+      this.router.navigate(['/users', 'login']);
     });
   }
 }

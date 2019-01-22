@@ -10,6 +10,4 @@ var user_manager_add_component_1 = require("./user-manager/add/user-manager-add.
 exports.UserManagerAddComponent = user_manager_add_component_1.UserManagerAddComponent;
 var user_manager_edit_component_1 = require("./user-manager/edit/user-manager-edit.component");
 exports.UserManagerEditComponent = user_manager_edit_component_1.UserManagerEditComponent;
-var user_routing_module_1 = require("./user.routing.module");
-exports.UserRouterModule = user_routing_module_1.UserRouterModule;
 //# sourceMappingURL=user.barel.js.map

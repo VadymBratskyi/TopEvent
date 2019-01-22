@@ -686,7 +686,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vadim-PC\\.nuget\\packages\\": {},
+    "C:\\Users\\VBratskyi\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -695,14 +695,14 @@
       "projectUniqueName": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
       "projectName": "TopEvent.BLL",
       "projectPath": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\TopEvent.BLL.csproj",
-      "packagesPath": "C:\\Users\\Vadim-PC\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\VBratskyi\\.nuget\\packages\\",
       "outputPath": "C:\\GitHub\\TopEvent\\TopEvent.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vadim-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VBratskyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

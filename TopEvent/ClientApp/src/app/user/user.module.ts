@@ -35,7 +35,7 @@ import {
     UserRouterModule,
 
     /*material app*/
-    MatButtonModule
+    MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,

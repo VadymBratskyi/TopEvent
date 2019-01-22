@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from "../models.barel";
+import { User, UserEdit, UserCreate } from "../models.barel";
 
 
 
@@ -38,15 +38,15 @@ export class UserService {
     return this.http.get('/api/Users/GetById?userId=' + id);
   }
 
-  create(user: User) {
+  create(user: UserCreate) {
     return this.http.post('/api/Users/Create', user);
   }
 
-  update(user: User) {
+  edit(user: UserEdit) {
     return this.http.post('/api/Users/Edit', user);
   }
 
   delete(id: string) {
-    return this.http.delete('/api/Users/Delete?userId=' + id);
+    return this.http.post('/api/Users/Delete?userId=' + id, null);
   }
 }

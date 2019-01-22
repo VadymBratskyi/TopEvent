@@ -65,6 +65,8 @@
     <None Remove="ClientApp\src\app\_models\client.ts" />
     <None Remove="ClientApp\src\app\_models\common\navbar\nav-message-item.ts" />
     <None Remove="ClientApp\src\app\_models\common\navbar\nav-notification-item.ts" />
+    <None Remove="ClientApp\src\app\_models\common\user\user_create.ts" />
+    <None Remove="ClientApp\src\app\_models\common\user\user_edit.ts" />
     <None Remove="ClientApp\src\app\_models\common\user_login.ts" />
     <None Remove="ClientApp\src\app\_models\User.ts" />
     <None Remove="ClientApp\src\app\_models\user_register.ts" />
@@ -97,12 +99,23 @@
     <TypeScriptCompile Include="ClientApp\src\app\_models\Client.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\navbar\nav-message-item.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\navbar\nav-notification-item.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_create.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_edit.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_login.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_register.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\User.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_services\athentication.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_services\client.services.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_services\user.services.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ClientApp\src\app\_models\common\user\user_create.js">
+      <DependentUpon>user_create.ts</DependentUpon>
+    </None>
+    <None Update="ClientApp\src\app\_models\common\user\user_create.js.map">
+      <DependentUpon>user_create.js</DependentUpon>
+    </None>
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

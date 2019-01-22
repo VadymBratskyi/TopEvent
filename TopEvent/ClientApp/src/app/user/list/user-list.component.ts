@@ -33,16 +33,17 @@ export class UserListComponent implements OnInit {
       this.dataSource = data;
       this.isLoadingResults = false;
       this.isRateLimitReached = false;
-      this.resultsLength = data.length;
+      //this.resultsLength = data.length;
     });
   }
 
   onDelete(userId: string) {
-    alert(userId);
-  }
-
-  onEdit(userId:string) {
-    alert(userId);
+    if (confirm("Are you shure?")) {
+      this.servUser.delete(userId).subscribe(rez => {
+      this.loadData();
+      });
+    }
+    
   }
 
 }

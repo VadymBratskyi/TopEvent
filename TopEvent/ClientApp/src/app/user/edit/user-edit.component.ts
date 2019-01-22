@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Router, ActivatedRoute } from '@angular/router';
+import { UserService } from "../../_services/user.services";
+import { User, UserEdit } from "../../models.barel";
 
 @Component({
   selector: 'user-edit',
@@ -9,12 +10,43 @@ import { Router } from '@angular/router';
 })
 export class UserEditComponent implements OnInit {
 
+  model: UserEdit;
+  loading: boolean;
+
   constructor(
-    private router: Router
+    private servUser: UserService,
+    private router: Router,
+    private activatedRouter: ActivatedRoute
   ) { }
 
+
   ngOnInit() {
+    this.activatedRouter.paramMap.subscribe(rout => {
+      let userId = rout.get("userId");
+      if (userId) {
+        this.onLoadDate(userId);
+      }
+    });
   }
 
+  onLoadDate(userId: string) {
+    this.servUser.getById(userId).subscribe((user: User) => {
+      this.model = new UserEdit();
+      this.model.id = user.id;
+      this.model.email = user.email;
+      this.model.phonenumber = user.phoneNumber;
+    });
+  }
+
+  edit() {
+    this.loading = true;
+    this.servUser.edit(this.model).subscribe(result => {
+        this.router.navigate(['/users','list']);
+      },
+      error => {
+        console.error('Error', error);
+        this.loading = false;
+      });
+  }
 
 }

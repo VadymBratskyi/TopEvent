@@ -107,7 +107,7 @@ namespace TopEvent.Controllers
 
                     var result = await _userManager.UpdateAsync(user);
                     if (result.Succeeded) {
-                        return Ok("success edit");
+                        return Ok(model);
                     }
                     else
                     {
@@ -134,7 +134,7 @@ namespace TopEvent.Controllers
                     var result = await _userManager.DeleteAsync(user);
                     if (result.Succeeded)
                     {
-                        return Ok("success delete");
+                        return Ok(userId);
                     }
                     else
                     {

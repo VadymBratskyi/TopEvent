@@ -62,6 +62,10 @@ namespace TopEvent.Controllers
                 }
                 else
                 {
+                    foreach (var identityError in result.Errors)
+                    {
+                        ModelState.AddModelError(String.Empty, identityError.Description);
+                    }
                     return BadRequest(ModelState);
                 }
             }
@@ -89,6 +93,7 @@ namespace TopEvent.Controllers
                 }
                 else
                 {
+                    ModelState.AddModelError(String.Empty, "Неправильный логин и (или) пароль");
                     return BadRequest(ModelState);
                 }
             }
@@ -104,7 +109,7 @@ namespace TopEvent.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            return Json("succes out");
+            return Ok();
         }
     }
 }

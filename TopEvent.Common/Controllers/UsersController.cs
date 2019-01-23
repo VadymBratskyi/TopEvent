@@ -14,7 +14,7 @@ namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
-    //[Authorize(Roles = "BossVados")]
+    [Authorize(Roles = "BossVados")]
     public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -45,12 +45,13 @@ namespace TopEvent.Controllers
                 }
                 else
                 {
-                    return NotFound(userId);
+                    ModelState.AddModelError(String.Empty, "User not found");
+                    return BadRequest(ModelState);
                 }
 
             }
-
-            return BadRequest(new { errorMessage = "Can't find. User id is Empty" });
+            ModelState.AddModelError(String.Empty, "Can't find. User id is Empty");
+            return BadRequest(ModelState);
 
         }
 
@@ -82,6 +83,10 @@ namespace TopEvent.Controllers
                 }
                 else
                 {
+                    foreach (var identityError in result.Errors)
+                    {
+                        ModelState.AddModelError(string.Empty, identityError.Description);
+                    }
                     return BadRequest(ModelState);
                 }
             }
@@ -111,11 +116,17 @@ namespace TopEvent.Controllers
                     }
                     else
                     {
+                        foreach (var identityError in result.Errors)
+                        {
+                            ModelState.AddModelError(String.Empty, identityError.Description);
+                        }
                         return BadRequest(ModelState);
                     }
                 }
-                else {
-                    return NotFound(model);
+                else
+                {
+                    ModelState.AddModelError(String.Empty, "User not found");
+                    return BadRequest(ModelState);
                 }
 
             }
@@ -143,13 +154,18 @@ namespace TopEvent.Controllers
                     }
                     else
                     {
-                        return BadRequest(model);
+                        foreach (var identityError in result.Errors)
+                        {
+                            ModelState.AddModelError(String.Empty, identityError.Description);
+                        }
+                        return BadRequest(ModelState);
                     }
 
                 }
                 else
                 {
-                    return NotFound(model);
+                    ModelState.AddModelError(String.Empty, "User not found");
+                    return BadRequest(ModelState);
                 }
             }
             else {
@@ -171,11 +187,16 @@ namespace TopEvent.Controllers
                     }
                     else
                     {
-                        return BadRequest(result.Errors);
+                        foreach (var identityError in result.Errors)
+                        {
+                            ModelState.AddModelError(String.Empty, identityError.Description);
+                        }
+                        return BadRequest(ModelState);
                     }
                 }
             }
-            return BadRequest(new { errorMessage = "Can't delete. User id is Empty"});  
+            ModelState.AddModelError(String.Empty, "Can't delete. User id is Empty");
+            return BadRequest(ModelState);  
         }
     }
 }

@@ -10,4 +10,6 @@ var user_add_component_1 = require("./add/user-add.component");
 exports.UserAddComponent = user_add_component_1.UserAddComponent;
 var user_edit_component_1 = require("./edit/user-edit.component");
 exports.UserEditComponent = user_edit_component_1.UserEditComponent;
+var change_password_component_1 = require("./change-password/change-password.component");
+exports.ChangePasswordComponent = change_password_component_1.ChangePasswordComponent;
 //# sourceMappingURL=user.barel.js.map

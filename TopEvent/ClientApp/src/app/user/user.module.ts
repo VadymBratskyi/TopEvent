@@ -10,7 +10,8 @@ import {
   RegisterComponent,
   UserListComponent,
   UserAddComponent,
-  UserEditComponent
+  UserEditComponent,
+  ChangePasswordComponent
 } from "./user.barel";
 
 import {
@@ -18,7 +19,9 @@ import {
   MatTableModule,
   MatPaginatorModule,
   MatIconModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatFormFieldModule,
+  MatInputModule
   } from "../materil.barel"
 
 @NgModule({
@@ -27,7 +30,8 @@ import {
     LoginComponent,
     UserListComponent,
     UserAddComponent,
-    UserEditComponent
+    UserEditComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,9 @@ import {
     MatTableModule,
     MatPaginatorModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [UserService, AuthenticationService],
 })

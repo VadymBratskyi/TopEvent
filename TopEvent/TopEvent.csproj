@@ -61,10 +61,12 @@
     <None Remove="ClientApp\src\app\nav-menu\sidenav-list\sidenav-list.component.ts" />
     <None Remove="ClientApp\src\app\nav-menu\sidenav-profile\sidenav-profile.component.ts" />
     <None Remove="ClientApp\src\app\nav-menu\user-card\user-card.component.ts" />
+    <None Remove="ClientApp\src\app\user\change-password\change-password.component.ts" />
     <None Remove="ClientApp\src\app\_guards\auth.guard.ts" />
     <None Remove="ClientApp\src\app\_models\client.ts" />
     <None Remove="ClientApp\src\app\_models\common\navbar\nav-message-item.ts" />
     <None Remove="ClientApp\src\app\_models\common\navbar\nav-notification-item.ts" />
+    <None Remove="ClientApp\src\app\_models\common\user\change_password.ts" />
     <None Remove="ClientApp\src\app\_models\common\user\user_create.ts" />
     <None Remove="ClientApp\src\app\_models\common\user\user_edit.ts" />
     <None Remove="ClientApp\src\app\_models\common\user_login.ts" />
@@ -95,10 +97,12 @@
     <TypeScriptCompile Include="ClientApp\src\app\nav-menu\sidenav-list\sidenav-list.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\nav-menu\sidenav-profile\sidenav-profile.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\nav-menu\user-card\user-card.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\user\change-password\change-password.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_guards\auth.guard.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\Client.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\navbar\nav-message-item.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\navbar\nav-notification-item.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\change_password.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_create.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_edit.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\common\user\user_login.ts" />

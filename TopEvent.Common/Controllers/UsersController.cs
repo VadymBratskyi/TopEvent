@@ -125,6 +125,39 @@ namespace TopEvent.Controllers
             }
         }
 
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordViewModel model) {
+
+            if (ModelState.IsValid)
+            {
+
+                User user = await _userManager.FindByIdAsync(model.Id);
+                if (user != null)
+                {
+
+                    IdentityResult result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    if (result.Succeeded)
+                    {
+                        return Ok(model);
+                    }
+                    else
+                    {
+                        return BadRequest(model);
+                    }
+
+                }
+                else
+                {
+                    return NotFound(model);
+                }
+            }
+            else {
+                return BadRequest(ModelState);
+            }
+
+        }
+
         [HttpPost("[action]")]
         public async Task<IActionResult> Delete(Guid userId) {
 

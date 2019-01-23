@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User, UserEdit, UserCreate } from "../models.barel";
+import { User, UserEdit, UserCreate, UserChangePassword } from "../models.barel";
 
 
 
@@ -44,6 +44,10 @@ export class UserService {
 
   edit(user: UserEdit) {
     return this.http.post('/api/Users/Edit', user);
+  }
+
+  changePassword(user: UserChangePassword) {
+    return this.http.post('/api/Users/ChangePassword', user);
   }
 
   delete(id: string) {

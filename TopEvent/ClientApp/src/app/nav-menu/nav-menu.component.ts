@@ -17,7 +17,7 @@ export class NavMenuComponent {
   private servAuthentication: AuthenticationService,
     private servUser: UserService,
     private router: Router) {
-   
+    console.log(servUser.GetCurrentUser);
   }
     
 }

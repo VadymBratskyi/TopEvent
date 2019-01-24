@@ -7,7 +7,7 @@ using TopEvent.Model.Models;
 using Microsoft.AspNetCore.Identity;
 using TopEvent.DAL.Repositories;
 using TopEvent.Model.ViewModels;
-
+using System.Linq;
 
 namespace TopEvent.Controllers
 {
@@ -29,7 +29,9 @@ namespace TopEvent.Controllers
         [HttpGet("[action]")]
         public IEnumerable<Client> GetClients()
         {
-            return uw.Clients.GetAll();
+            var clients = uw.ClientRepository.Get(); 
+
+            return clients;
         }
 
 
@@ -57,8 +59,13 @@ namespace TopEvent.Controllers
                         Birthday = model.Birthday,
                         User = user
                     };
-                    uw.Clients.Created(client);
+                    uw.ClientRepository.Insert(client);
                     await uw.SaveAsync();
+
+                    model.Password = null;
+                    model.PasswordConfirm = null;
+                    return Ok(model);
+
                 }
                 else
                 {
@@ -69,12 +76,9 @@ namespace TopEvent.Controllers
                     return BadRequest(ModelState);
                 }
             }
-            else
-            {
-                return BadRequest(ModelState);
-            }
+
+            return BadRequest(ModelState);            
             
-            return Ok(model);
         }
 
         [HttpPost("[action]")]
@@ -88,7 +92,8 @@ namespace TopEvent.Controllers
                 {
                     if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
                     {
-                        return Json(model);
+                        model.Password = null;
+                        return Ok(model);
                     }
                 }
                 else
@@ -97,12 +102,9 @@ namespace TopEvent.Controllers
                     return BadRequest(ModelState);
                 }
             }
-            else
-            {
-                return BadRequest(ModelState);
-            }
 
-            return Ok(model);
+            return BadRequest(ModelState);    
+           
         }
 
         [HttpPost("[action]")]

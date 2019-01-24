@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TopEvent.DAL.EF;
 using TopEvent.DAL.Interfaces;
+using TopEvent.Model.Models.Base;
 using TopEvent.Model.Models;
 
 namespace TopEvent.DAL.Repositories
@@ -19,24 +20,22 @@ namespace TopEvent.DAL.Repositories
             _db = context;
         }
 
-
-        public EntityRepository<Client> Clients
+        public EntityRepository<Client> ClientRepository
         {
             get { return _clientRepository ?? (_clientRepository = new EntityRepository<Client>(_db)); }
         }
 
-        public EntityRepository<Event> Events
+        public EntityRepository<Event> EventRepository
         {
             get { return _eventRepository ?? (_eventRepository = new EntityRepository<Event>(_db)); }
         }
-
 
         public async Task SaveAsync()
         {
             await _db.SaveChangesAsync();
         }
 
-        private bool _disposed;
+        private bool _disposed;     
 
         public virtual void Dispose(bool disposing)
         {

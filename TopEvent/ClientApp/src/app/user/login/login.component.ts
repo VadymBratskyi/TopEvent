@@ -26,10 +26,10 @@ export class LoginComponent implements OnInit {
   login() {
     this.loading = true;
     this.model.returnUrl = this.routerActivated.snapshot.queryParams['returnUrl'] || '/';
-    this.servAuthentication.login(this.model).subscribe((router:UserLogin) => {
-      console.log(router);
+    this.servAuthentication.login(this.model).subscribe((router:UserLogin) => {     
         this.loading = false;
-        this.router.navigate([router.returnUrl]);
+
+        this.router.navigate(['/']);
       },
       error => {
         console.error('Error',error);

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
-using TopEvent.Model.Interfaces;
+using TopEvent.Model.Models.Base;
 
 namespace TopEvent.Model.Models
 {
-    public class Client : IEntity
+    public class Client : BaseEtity
     {
         [Key]
         [ForeignKey("User")]

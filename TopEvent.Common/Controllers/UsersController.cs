@@ -14,7 +14,7 @@ namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
-    [Authorize(Roles = "BossVados")]
+    //[Authorize(Roles = "BossVados")]
     public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -78,7 +78,7 @@ namespace TopEvent.Controllers
                         Birthday = DateTime.Now,
                         User = user
                     };
-                    uw.Clients.Created(client);
+                    uw.ClientRepository.Insert(client);
                     await uw.SaveAsync();
                 }
                 else

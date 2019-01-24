@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TopEvent.Model.Interfaces;
+using TopEvent.Model.Models.Base;
 
 namespace TopEvent.Model.Models
 {
-    public class EventType : IEntity
+    public class EventType : BaseEtity
     {
-        public Guid Id { get; set; }
-
         public string Title { get; set; }
 
         public int Code { get; set; }

@@ -1,3 +1,4 @@
+using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,6 +7,8 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using TopEvent.DAL.EF;
 using TopEvent.DAL.Repositories;
 using TopEvent.Model.Models;
@@ -35,7 +38,17 @@ namespace TopEvent
             services.AddDefaultIdentity<User>()
                 .AddEntityFrameworkStores<EventDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddOData();
+
+            services.AddMvc()
+                .AddJsonOptions(opt =>
+                {
+                    //opt.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                    //opt.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                    opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                    //opt.SerializerSettings.Converters.Add(new IsoDateTimeConverter() { DateTimeFormat = "dd.MM.yyyy hh.mm.ss" });
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -70,7 +83,7 @@ namespace TopEvent
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
-
+                        
             app.UseSpa(spa =>
             {
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,

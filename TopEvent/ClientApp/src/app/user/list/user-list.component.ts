@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from "../../models.barel";
 import { UserService } from "../../_services/user.services";
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator } from "../../materil.barel";
 
 
 @Component({

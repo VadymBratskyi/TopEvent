@@ -15,20 +15,20 @@ namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
-    [Authorize(Roles = "BossVados")]
+  //  [Authorize(Roles = "BossVados")]
     public class RolesController: Controller
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly RoleManager<Role> _roleManager;
         private readonly UserManager<User> _userManager;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, UserManager<User> userManager)
+        public RolesController(RoleManager<Role> roleManager, UserManager<User> userManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GeAll()
+        public async Task<IActionResult> GetAll()
         {
             var roles = await _roleManager.Roles.ToListAsync();
             return Ok(roles);
@@ -39,7 +39,7 @@ namespace TopEvent.Controllers
         {
             if (!string.IsNullOrEmpty(name))
             {
-                IdentityResult result = await _roleManager.CreateAsync(new IdentityRole(name));
+                IdentityResult result = await _roleManager.CreateAsync(new Role(name));
                 if (result.Succeeded)
                 {
                     return Ok();
@@ -61,7 +61,7 @@ namespace TopEvent.Controllers
         {
             if (id != Guid.Empty)
             {
-                IdentityRole role = await _roleManager.FindByIdAsync(id.ToString());
+                Role role = await _roleManager.FindByIdAsync(id.ToString());
                 if (role != null)
                 {
                     IdentityResult result = await _roleManager.DeleteAsync(role);

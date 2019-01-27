@@ -11,7 +11,9 @@ import {
   UserListComponent,
   UserAddComponent,
   UserEditComponent,
-  ChangePasswordComponent
+  ChangePasswordComponent,
+  RolesListComponent,
+  UserRolesComponent
 } from "./user.barel";
 
 import {
@@ -31,7 +33,9 @@ import {
     UserListComponent,
     UserAddComponent,
     UserEditComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    RolesListComponent,
+    UserRolesComponent
   ],
   imports: [
     BrowserModule,

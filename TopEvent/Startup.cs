@@ -2,6 +2,7 @@ using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
@@ -35,11 +36,11 @@ namespace TopEvent
 
             services.AddScoped<EfUnitOfWork>();
 
-            services.AddDefaultIdentity<User>()
-                .AddEntityFrameworkStores<EventDbContext>();
-
             services.AddOData();
 
+            services.AddIdentity<User, Role>()
+                .AddEntityFrameworkStores<EventDbContext>();
+            
             services.AddMvc()
                 .AddJsonOptions(opt =>
                 {

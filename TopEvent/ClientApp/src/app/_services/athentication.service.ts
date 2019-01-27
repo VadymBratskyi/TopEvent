@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { UserRegister, UserLogin } from "../models.barel";
 import { UserService } from './user.services';
+import { environment } from "../../environments/environment";
 
 
 @Injectable()
@@ -14,7 +15,7 @@ export class AuthenticationService {
 
   
   register(user: UserRegister) {
-    return this.http.post('/api/Account/Register', user).pipe(
+    return this.http.post(environment.rootAipiUrl+environment.accountRegister, user).pipe(
       map((model: UserRegister) => {
         if (model) {
           localStorage.setItem("currentUser", JSON.stringify(model));
@@ -26,7 +27,7 @@ export class AuthenticationService {
 
   login(user: UserLogin) {
 
-    return this.http.post('/api/Account/Login', user)
+    return this.http.post(environment.rootAipiUrl+environment.accountLogin, user)
       .pipe(
         map((model: UserLogin) => {
           if (model) {
@@ -38,7 +39,7 @@ export class AuthenticationService {
   }
 
   logout() {
-    return this.http.post('/api/Account/LogOut', null)
+    return this.http.post(environment.rootAipiUrl+environment.accountLogOut, null)
       .pipe(
         map(out => {
           // remove user from local storage to log user out

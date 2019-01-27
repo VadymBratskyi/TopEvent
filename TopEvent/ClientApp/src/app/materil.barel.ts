@@ -34,5 +34,7 @@ export {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  MatFormFieldModule
+  MatFormFieldModule,
+  MatTableDataSource,
+  MatPaginator
 } from '@angular/material';

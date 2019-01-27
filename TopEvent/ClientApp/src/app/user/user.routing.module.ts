@@ -7,7 +7,9 @@ import {
   UserListComponent,
   UserAddComponent,
   UserEditComponent,
-  ChangePasswordComponent
+  ChangePasswordComponent,
+  RolesListComponent,
+  UserRolesComponent
 } from "./user.barel";
 
 
@@ -20,9 +22,14 @@ const router: Route[] = [
       { path: 'list', component: UserListComponent, canActivate: [AuthGuard] },
       { path: 'create', component: UserAddComponent, canActivate: [AuthGuard] },
       { path: 'edit/:userId', component: UserEditComponent, canActivate: [AuthGuard] },
-      { path: 'changepassword/:userId', component: ChangePasswordComponent, canActivate: [AuthGuard] }
-    ]
-  }  
+      { path: 'changepassword/:userId', component: ChangePasswordComponent, canActivate: [AuthGuard] },
+      { path: 'roles', children: [
+          { path: "list", component: RolesListComponent, canActivate: [AuthGuard] }
+        ]
+      },
+      { path: 'roles/:userId', component: UserRolesComponent, canActivate: [AuthGuard] }
+   ] 
+  }
 ];
 
 

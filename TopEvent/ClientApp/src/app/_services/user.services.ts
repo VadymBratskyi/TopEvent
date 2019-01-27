@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User, UserEdit, UserCreate, UserChangePassword } from "../models.barel";
-
+import { environment }  from "../../environments/environment";
 
 
 @Injectable()
@@ -31,26 +31,31 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<User[]>('/api/Users/GetAll');
+    return this.http.get<User[]>(environment.rootAipiUrl+ environment.userGetAll);
   }
 
   getById(id: string) {
-    return this.http.get('/api/Users/GetById?userId=' + id);
+    return this.http.get(environment.rootAipiUrl+environment.userGetById+'?userId=' + id);
   }
 
   create(user: UserCreate) {
-    return this.http.post('/api/Users/Create', user);
+    return this.http.post(environment.rootAipiUrl+environment.userCreate, user);
   }
 
   edit(user: UserEdit) {
-    return this.http.post('/api/Users/Edit', user);
+    return this.http.post(environment.rootAipiUrl+environment.userEdit, user);
   }
 
   changePassword(user: UserChangePassword) {
-    return this.http.post('/api/Users/ChangePassword', user);
+    return this.http.post(environment.rootAipiUrl+environment.userChangePassword, user);
   }
 
   delete(id: string) {
-    return this.http.post('/api/Users/Delete?userId=' + id, null);
+    return this.http.post(environment.rootAipiUrl+environment.userDelete+'?userId=' + id, null);
   }
+
+  getRolesAll() {
+    return this.http.get<any[]>(environment.rootAipiUrl+ environment.rolesGetAll);
+  }
+
 }

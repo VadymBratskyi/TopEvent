@@ -16,4 +16,6 @@ var user_roles_component_1 = require("./roles/user-roles/user-roles.component");
 exports.UserRolesComponent = user_roles_component_1.UserRolesComponent;
 var change_password_component_1 = require("./change-password/change-password.component");
 exports.ChangePasswordComponent = change_password_component_1.ChangePasswordComponent;
+var add_role_dialog_component_1 = require("./roles/add/add-role-dialog.component");
+exports.AddRoleDialogComponent = add_role_dialog_component_1.AddRoleDialogComponent;
 //# sourceMappingURL=user.barel.js.map

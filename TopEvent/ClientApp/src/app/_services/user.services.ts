@@ -58,4 +58,15 @@ export class UserService {
     return this.http.get<any[]>(environment.rootAipiUrl+ environment.rolesGetAll);
   }
 
+  createRole(roleName: string) {
+    return this.http.post(environment.rootAipiUrl + environment.rolesCreate + "?name=" + roleName, null);
+  }
+
+  deleteRole(roleId: string) {
+    return this.http.post(environment.rootAipiUrl + environment.rolesDelete + "?id=" + roleId, null);
+  }
+
+  getUserEditRoles(userId: string) {
+    return this.http.post(environment.rootAipiUrl + environment.rolesEdit + "?userId=" + userId, null);
+  }
 }

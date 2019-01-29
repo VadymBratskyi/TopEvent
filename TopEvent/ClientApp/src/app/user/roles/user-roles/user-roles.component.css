@@ -1,2 +1,8 @@
-﻿body {
+example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("/assets/images/vados.jpg");
+  background-size: cover;
 }

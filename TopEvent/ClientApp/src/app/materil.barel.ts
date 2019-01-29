@@ -36,5 +36,7 @@ export {
   MatTreeModule,
   MatFormFieldModule,
   MatTableDataSource,
-  MatPaginator
+  MatPaginator,
+  MatDialog,
+  MatDialogRef
 } from '@angular/material';

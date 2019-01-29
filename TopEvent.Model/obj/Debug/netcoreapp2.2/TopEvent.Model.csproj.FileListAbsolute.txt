@@ -14,3 +14,4 @@ C:\GitHub\TopEvent\TopEvent.Model\obj\Debug\netcoreapp2.2\TopEvent.Model.Assembl
 C:\GitHub\TopEvent\TopEvent.Model\obj\Debug\netcoreapp2.2\TopEvent.Model.AssemblyInfo.cs
 C:\GitHub\TopEvent\TopEvent.Model\obj\Debug\netcoreapp2.2\TopEvent.Model.dll
 C:\GitHub\TopEvent\TopEvent.Model\obj\Debug\netcoreapp2.2\TopEvent.Model.pdb
+C:\GitHub\TopEvent\TopEvent.Model\obj\Debug\netcoreapp2.2\TopEvent.Model.csprojAssemblyReference.cache

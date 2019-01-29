@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { UserService } from "../../../_services/user.services";
+import { ChangeRole } from "../../../models.barel";
 
 @Component({
   selector: 'user-roles',
@@ -9,22 +10,31 @@ import { UserService } from "../../../_services/user.services";
 })
 export class UserRolesComponent implements OnInit {
 
+  changeRole: ChangeRole;
+
   constructor(
     private servUser: UserService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {  }
 
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(rout => {
+      let userId = rout.get("userId");
+      if (userId) {
+        this.loadData(userId);
+      }
+    });
   }
 
-  loadData() {
-    this.servUser.getRolesAll().subscribe(data => {
-      this.dataSource = new MatTableDataSource<any>(data);
-      this.isLoadingResults = false;
-      this.isRateLimitReached = false;
-      //this.resultsLength = data.length;
-      this.dataSource.paginator = this.paginator;
+  loadData(userId: string) {
+    this.servUser.getUserEditRoles(userId).subscribe((data: ChangeRole) => {
+      this.changeRole = data;
     });
+  }
+
+  onSave() {
+    
   }
 
 }

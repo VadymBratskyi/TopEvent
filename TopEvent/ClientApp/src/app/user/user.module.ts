@@ -13,7 +13,8 @@ import {
   UserEditComponent,
   ChangePasswordComponent,
   RolesListComponent,
-  UserRolesComponent
+  UserRolesComponent,
+  AddRoleDialogComponent
 } from "./user.barel";
 
 import {
@@ -23,7 +24,11 @@ import {
   MatIconModule,
   MatProgressSpinnerModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatDialogModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatListModule
   } from "../materil.barel"
 
 @NgModule({
@@ -35,12 +40,14 @@ import {
     UserEditComponent,
     ChangePasswordComponent,
     RolesListComponent,
-    UserRolesComponent
+    UserRolesComponent,
+    AddRoleDialogComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     UserRouterModule,
+    MatDialogModule,
 
     /*material app*/
     MatButtonModule,
@@ -49,8 +56,12 @@ import {
     MatIconModule,
     MatProgressSpinnerModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatListModule
   ],
+  entryComponents: [AddRoleDialogComponent, RolesListComponent],
   providers: [UserService, AuthenticationService],
 })
 export class UserModule {

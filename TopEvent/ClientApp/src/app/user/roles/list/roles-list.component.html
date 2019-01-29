@@ -22,22 +22,13 @@
     <!-- Symbol Column -->
     <ng-container matColumnDef="buttons">
       <th mat-header-cell *matHeaderCellDef>
-        <button mat-button [routerLink]="['/users','create']">
+        <button mat-button (click)="addNewRole()">
           <mat-icon>add</mat-icon>
-        </button>
-        <button mat-button [routerLink]="['/users','roles','list']">
-          Roles List
         </button>
       </th>
       <td mat-cell *matCellDef="let element">
         <button mat-button (click)="onDelete(element.id)">
           <mat-icon>delete</mat-icon>
-        </button>
-        <button mat-button [routerLink]="['/users','edit',element.id]">
-          <mat-icon>edit</mat-icon>
-        </button>
-        <button mat-button [routerLink]="['/users','roles',element.id]">
-          Roles
         </button>
       </td>
     </ng-container>

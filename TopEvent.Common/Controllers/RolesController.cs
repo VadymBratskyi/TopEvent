@@ -121,36 +121,36 @@ namespace TopEvent.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPost("[action]")]
-        public async Task<IActionResult> Edit(Guid userId, List<string> roles)
-        {
-            if (userId != Guid.Empty)
-            {
+        //[HttpPost("[action]")]
+        //public async Task<IActionResult> Edit(Guid userId, List<string> roles)
+        //{
+        //    if (userId != Guid.Empty)
+        //    {
 
-                User user = await _userManager.FindByIdAsync(userId.ToString());
-                if (user != null)
-                {
-                    var userRoles = await _userManager.GetRolesAsync(user);
-                    var allRoles = _roleManager.Roles.ToList();
-                    var addedRoles = roles.Except(userRoles);
-                    var removeRoles = userRoles.Except(roles);
+        //        User user = await _userManager.FindByIdAsync(userId.ToString());
+        //        if (user != null)
+        //        {
+        //            var userRoles = await _userManager.GetRolesAsync(user);
+        //            var allRoles = _roleManager.Roles.ToList();
+        //            var addedRoles = roles.Except(userRoles);
+        //            var removeRoles = userRoles.Except(roles);
 
-                    await _userManager.AddToRolesAsync(user, addedRoles);
+        //            await _userManager.AddToRolesAsync(user, addedRoles);
 
-                    await _userManager.RemoveFromRolesAsync(user, removeRoles);
+        //            await _userManager.RemoveFromRolesAsync(user, removeRoles);
 
-                    return Ok();
-                }
-                else
-                {
-                    ModelState.AddModelError(String.Empty, "User not Found");
-                    return BadRequest(ModelState);
-                }
+        //            return Ok();
+        //        }
+        //        else
+        //        {
+        //            ModelState.AddModelError(String.Empty, "User not Found");
+        //            return BadRequest(ModelState);
+        //        }
 
-            }
+        //    }
             
-            ModelState.AddModelError(String.Empty, "User id is Empty");
-            return BadRequest(ModelState);
-        }
+        //    ModelState.AddModelError(String.Empty, "User id is Empty");
+        //    return BadRequest(ModelState);
+        //}
     }
 }

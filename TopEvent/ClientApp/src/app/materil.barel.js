@@ -39,4 +39,6 @@ exports.MatTreeModule = material_1.MatTreeModule;
 exports.MatFormFieldModule = material_1.MatFormFieldModule;
 exports.MatTableDataSource = material_1.MatTableDataSource;
 exports.MatPaginator = material_1.MatPaginator;
+exports.MatDialog = material_1.MatDialog;
+exports.MatDialogRef = material_1.MatDialogRef;
 //# sourceMappingURL=materil.barel.js.map

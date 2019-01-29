@@ -6,3 +6,4 @@ export { UserEditComponent } from "./edit/user-edit.component";
 export { RolesListComponent } from "./roles/list/roles-list.component";
 export { UserRolesComponent } from "./roles/user-roles/user-roles.component";
 export { ChangePasswordComponent } from "./change-password/change-password.component";
+export { AddRoleDialogComponent } from "./roles/add/add-role-dialog.component";

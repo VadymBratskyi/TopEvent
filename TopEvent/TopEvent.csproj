@@ -53,6 +53,8 @@
     <None Remove="ClientApp\src\app\client\client.barel.ts" />
     <None Remove="ClientApp\src\app\client\client.module.ts" />
     <None Remove="ClientApp\src\app\client\client.routing.ts" />
+    <None Remove="ClientApp\src\app\foms\2\user-roles.component.ts" />
+    <None Remove="ClientApp\src\app\foms\user-roles.component.ts" />
     <None Remove="ClientApp\src\app\materil.barel.ts" />
     <None Remove="ClientApp\src\app\models.barel.ts" />
     <None Remove="ClientApp\src\app\nav-menu\messages-card\messages-card.component.ts" />
@@ -94,6 +96,8 @@
     <TypeScriptCompile Include="ClientApp\src\app\client\client.barel.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\client\client.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\client\client.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\foms\2\user-roles.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\foms\user-roles.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models.barel.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\materil.barel.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\nav-menu\messages-card\messages-card.component.ts" />

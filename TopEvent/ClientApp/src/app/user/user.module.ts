@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from "../_services/user.services";
 import { AuthenticationService } from "../_services/athentication.service";
 import { UserRouterModule } from "./user.routing.module";
@@ -28,7 +28,12 @@ import {
   MatDialogModule,
   MatCardModule,
   MatCheckboxModule,
-  MatListModule
+  MatListModule,
+  MatDatepickerModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSlideToggleModule,
+  MatNativeDateModule
   } from "../materil.barel"
 
 @NgModule({
@@ -46,6 +51,7 @@ import {
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     UserRouterModule,
     MatDialogModule,
 
@@ -59,7 +65,12 @@ import {
     MatInputModule,
     MatCardModule,
     MatCheckboxModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatNativeDateModule
   ],
   entryComponents: [AddRoleDialogComponent, RolesListComponent],
   providers: [UserService, AuthenticationService],

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UserService } from "../../../_services/user.services";
-import { ChangeRole } from "../../../models.barel";
+import { UserService } from "../../_services/user.services";
+import { ChangeRole } from "../../models.barel";
 import { NgForm, FormGroup, FormControl, FormArray, Validators, FormBuilder} from '@angular/forms';
 
 @Component({
@@ -14,7 +14,7 @@ export class UserRolesComponent implements OnInit {
   changeRole: ChangeRole;
 
   myForm: FormGroup = new FormGroup({
-    "phones": new FormArray([new FormControl("+3", Validators.required])
+    "phones": new FormArray([new FormControl("+3", Validators.required)])
   });
 
   regiForm: FormGroup;

@@ -17,9 +17,7 @@ export class UserRolesComponent implements OnInit {
   constructor(
     private servUser: UserService,
     private formBuilder: FormBuilder,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {
+    private activatedRoute: ActivatedRoute) {
     
     this.roleForm = formBuilder.group({
       roles: this.formBuilder.array([])
@@ -58,7 +56,12 @@ export class UserRolesComponent implements OnInit {
   }
 
   onSave() {
-    
+    if (this.roleForm.value.roles && this.roleForm.value.roles.length > 0) {
+      this.changeRole.userRoles = this.roleForm.value.roles
+      this.servUser.serRolesForUser(this.changeRole).subscribe(rez => {
+        console.log(rez)
+      });
+    }   
   }
   
   onFormSubmit(form: NgForm) {

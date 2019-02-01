@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User, UserEdit, UserCreate, UserChangePassword } from "../models.barel";
+import { User, UserEdit, UserCreate, UserChangePassword, ChangeRole } from "../models.barel";
 import { environment }  from "../../environments/environment";
 
 
@@ -68,5 +68,9 @@ export class UserService {
 
   getUserEditRoles(userId: string) {
     return this.http.post(environment.rootAipiUrl + environment.rolesEdit + "?userId=" + userId, null);
+  }
+
+  serRolesForUser(changeRole: ChangeRole) {
+    return this.http.post(environment.rootAipiUrl + environment.rolesEditUserRoles + "?userId=" + changeRole.userId, changeRole.userRoles);
   }
 }

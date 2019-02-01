@@ -22,7 +22,7 @@ export const environment = {
   rolesCreate: "Roles/Create",
   rolesDelete: "Roles/Delete",
   rolesEdit: "Roles/Edit",
-
+  rolesEditUserRoles: "Roles/EditUserRoles"
 
 };
 

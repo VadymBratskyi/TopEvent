@@ -17,7 +17,7 @@ export class UserRolesComponent implements OnInit {
 
     "userName": new FormControl("Tom", [Validators.required, this.userNameValidator]),
     "userEmail": new FormControl("", [Validators.required, Validators.pattern("[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}")]),
-    "phones": new FormArray([new FormControl("+3", Validators.required])
+    "phones": new FormArray([new FormControl("+3", Validators.required)])
   });
 
   userNameValidator(control: FormControl): { [s: string]: boolean } {

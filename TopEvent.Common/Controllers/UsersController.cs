@@ -13,8 +13,7 @@ using TopEvent.Model.ViewModels;
 namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
-    [Route("api/[controller]")]
-    //[Authorize(Roles = "BossVados")]
+    [Route("api/[controller]")]    
     public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;

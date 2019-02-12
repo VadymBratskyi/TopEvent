@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.loading = true;
     this.servAuthentication.register(this.model).subscribe(data => {
-          this.router.navigate(['/fetch-data']);
+          this.router.navigate(['/']);
         },
       error => {
         console.error('Error', error);

@@ -49,6 +49,8 @@ namespace TopEvent.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "user");
+
                     await _signInManager.SignInAsync(user, false);
                     var client = new Client()
                     {
@@ -62,9 +64,7 @@ namespace TopEvent.Controllers
                     uw.ClientRepository.Insert(client);
                     await uw.SaveAsync();
 
-                    model.Password = null;
-                    model.PasswordConfirm = null;
-                    return Ok(model);
+                    return Ok(user);
 
                 }
                 else
@@ -92,8 +92,9 @@ namespace TopEvent.Controllers
                 {
                     if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
                     {
-                        model.Password = null;
-                        return Ok(model);
+                        var user = _userManager.FindByEmailAsync(model.Email).Result;
+
+                        return Ok(user);
                     }
                 }
                 else
@@ -105,6 +106,45 @@ namespace TopEvent.Controllers
 
             return BadRequest(ModelState);    
            
+        }
+        
+        [HttpPost("[action]")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordViewModel model)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                User user = await _userManager.FindByIdAsync(model.Id);
+                if (user != null)
+                {
+
+                    IdentityResult result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    if (result.Succeeded)
+                    {
+                        return Ok(model);
+                    }
+                    else
+                    {
+                        foreach (var identityError in result.Errors)
+                        {
+                            ModelState.AddModelError(String.Empty, identityError.Description);
+                        }
+                        return BadRequest(ModelState);
+                    }
+
+                }
+                else
+                {
+                    ModelState.AddModelError(String.Empty, "User not found");
+                    return BadRequest(ModelState);
+                }
+            }
+            else
+            {
+                return BadRequest(ModelState);
+            }
+
         }
 
         [HttpPost("[action]")]

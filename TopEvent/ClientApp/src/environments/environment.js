@@ -19,6 +19,7 @@ exports.environment = {
     rolesCreate: "Roles/Create",
     rolesDelete: "Roles/Delete",
     rolesEdit: "Roles/Edit",
+    rolesEditUserRoles: "Roles/EditUserRoles"
 };
 /*
  * In development mode, to ignore zone related error stack frames such as

@@ -12,7 +12,7 @@ export class UserService {
   get GetCurrentUser() {
     if (!this.CurrentUser && localStorage.getItem("currentUser")) {
       let strUser = JSON.parse(localStorage.getItem("currentUser"));
-      this.CurrentUser = new User(strUser.email);
+      this.CurrentUser = <User> strUser;
       return this.CurrentUser;
     }    
     return this.CurrentUser;

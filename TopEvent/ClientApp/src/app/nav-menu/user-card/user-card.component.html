@@ -4,7 +4,7 @@
     <div class="pro-img">
       <img alt="user" src="{{servUser.GetCurrentUser ? 'assets/images/vados.jpg' : 'assets/images/unknownUser.png'}}" width="100">
     </div>
-    <h3 class="m-b-0">{{servUser.GetCurrentUser ? servUser.GetCurrentUser.userName : 'User Name'}}</h3>
+    <h3 class="m-b-0 overWrap">{{servUser.GetCurrentUser ? servUser.GetCurrentUser.userName : 'User Name'}}</h3>
     <h6 class="m-t-0 ">{{servUser.GetCurrentUser ? servUser.GetCurrentUser.email : 'User Email'}}</h6>
     <div class="row m-t-30" *ngIf="servUser.GetCurrentUser">
       <div class="col-md-4">

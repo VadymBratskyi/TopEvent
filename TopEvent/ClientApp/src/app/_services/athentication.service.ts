@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { UserRegister, UserLogin } from "../models.barel";
+import { UserRegister, UserLogin, User } from "../models.barel";
 import { UserService } from './user.services';
 import { environment } from "../../environments/environment";
 
@@ -16,7 +16,7 @@ export class AuthenticationService {
   
   register(user: UserRegister) {
     return this.http.post(environment.rootAipiUrl+environment.accountRegister, user).pipe(
-      map((model: UserRegister) => {
+      map((model: User) => {
         if (model) {
           localStorage.setItem("currentUser", JSON.stringify(model));
         }
@@ -29,7 +29,7 @@ export class AuthenticationService {
 
     return this.http.post(environment.rootAipiUrl+environment.accountLogin, user)
       .pipe(
-        map((model: UserLogin) => {
+      map((model: User) => {
           if (model) {
             localStorage.setItem("currentUser", JSON.stringify(model));
           }

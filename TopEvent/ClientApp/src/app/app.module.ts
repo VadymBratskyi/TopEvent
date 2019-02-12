@@ -6,6 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClientService } from "./_services/client.services";
 import { AuthGuard } from "./_guards/auth.guard";
 
+
+import { UserRolesComponent2 } from "./foms/user-roles.component";
+import { UserRolesComponent3 } from "./foms/2/user-roles.component";
+
+
 import {
   AppRouterModule,
   AppComponent,
@@ -23,7 +28,9 @@ import {
     AppComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    UserRolesComponent2,
+    UserRolesComponent3
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -9,7 +9,7 @@ import { NgForm, FormGroup, FormControl, FormArray, Validators, FormBuilder} fro
   templateUrl: './user-roles.component.html',
   styleUrls: ['./user-roles.component.css']
 })
-export class UserRolesComponent implements OnInit {
+export class UserRolesComponent3 implements OnInit {
 
   changeRole: ChangeRole;
 

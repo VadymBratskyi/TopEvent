@@ -1,0 +1,9 @@
+C:\GitHub\TopEvent\TopEvent.Model\bin\Release\netcoreapp2.2\TopEvent.Model.deps.json
+C:\GitHub\TopEvent\TopEvent.Model\bin\Release\netcoreapp2.2\TopEvent.Model.dll
+C:\GitHub\TopEvent\TopEvent.Model\bin\Release\netcoreapp2.2\TopEvent.Model.pdb
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.csprojAssemblyReference.cache
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.csproj.CoreCompileInputs.cache
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.AssemblyInfoInputs.cache
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.AssemblyInfo.cs
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.dll
+C:\GitHub\TopEvent\TopEvent.Model\obj\Release\netcoreapp2.2\TopEvent.Model.pdb

@@ -14,7 +14,7 @@ export class NavMenuUserCardComponent {
   
   constructor(
     private servAuthentication: AuthenticationService,
-    private servUser: UserService,
+    public servUser: UserService,
     private router: Router) {
   }
 

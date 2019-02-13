@@ -13,7 +13,8 @@ using TopEvent.Model.ViewModels;
 namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
-    [Route("api/[controller]")]    
+    [Route("api/[controller]")]
+    [Authorize]
     public class UsersController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -26,6 +27,7 @@ namespace TopEvent.Controllers
 
 
         [HttpGet("[action]")]
+        [Authorize(Roles = "bossVados")]
         public async  Task<IActionResult> GetAll()
         {
             var data = await _userManager.Users.ToListAsync();
@@ -55,6 +57,7 @@ namespace TopEvent.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "bossVados")]
         public async Task<IActionResult> Create([FromBody]CreateUserViewModel model) {
 
             if (ModelState.IsValid) {
@@ -98,6 +101,7 @@ namespace TopEvent.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "bossVados")]
         public async Task<IActionResult> Edit([FromBody] EditUserViewModel model) {
 
             if (ModelState.IsValid) {
@@ -174,6 +178,7 @@ namespace TopEvent.Controllers
         }
 
         [HttpPost("[action]")]
+        [Authorize(Roles = "bossVados")]
         public async Task<IActionResult> Delete(Guid userId) {
 
             if (userId != Guid.Empty) {

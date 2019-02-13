@@ -39,7 +39,7 @@ export class ChangePasswordComponent implements OnInit {
   changePassword() {
     this.loading = true;
     this.servUser.changePassword(this.model).subscribe(data => {
-      this.router.navigate(['/users','list']);
+      this.router.navigate(['/']);
     },
       error => {
         console.error('Error', error);

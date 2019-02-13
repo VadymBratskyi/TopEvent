@@ -15,7 +15,7 @@ namespace TopEvent.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
-    [Authorize(Roles = "BossVados")]
+    [Authorize(Roles = "bossVados")]
     public class RolesController: Controller
     {
         private readonly RoleManager<Role> _roleManager;

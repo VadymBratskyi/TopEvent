@@ -38,7 +38,8 @@ export class UserListComponent implements OnInit {
       this.isRateLimitReached = false;
       //this.resultsLength = data.length;
       this.dataSource.paginator = this.paginator;
-    });
+    },
+      error => console.error("vados error"));
   }
 
   onDelete(userId: string) {

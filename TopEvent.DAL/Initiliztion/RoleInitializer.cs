@@ -16,12 +16,12 @@ namespace TopEvent.DAL.Initiliztion
 
             if (await roleManager.FindByNameAsync(vadosEmail) == null)
             {
-                await roleManager.CreateAsync(new Role("BossVados"));
+                await roleManager.CreateAsync(new Role("bossVados"));
             }
 
-            if (await roleManager.FindByNameAsync("User") == null)
+            if (await roleManager.FindByNameAsync("user") == null)
             {
-                await roleManager.CreateAsync(new Role("User"));
+                await roleManager.CreateAsync(new Role("user"));
             }
 
             if (await userManager.FindByNameAsync(vadosEmail) == null)
@@ -30,7 +30,7 @@ namespace TopEvent.DAL.Initiliztion
                 IdentityResult result = await userManager.CreateAsync(bosVados, password);
                 if (result.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(bosVados, "BossVados");
+                    await userManager.AddToRoleAsync(bosVados, "bossVados");
                 }
             }
         }

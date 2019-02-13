@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User, UserEdit, UserCreate, UserChangePassword, ChangeRole } from "../models.barel";
-import { environment }  from "../../environments/environment";
+import { environment } from "../../environments/environment";
 
 
 @Injectable()
@@ -31,7 +31,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<User[]>(environment.rootAipiUrl+ environment.userGetAll);
+    return this.http.get<User[]>(environment.rootAipiUrl + environment.userGetAll);
   }
 
   getById(id: string) {

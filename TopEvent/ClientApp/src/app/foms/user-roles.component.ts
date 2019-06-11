@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { UserService } from "../_services/user.services";
-import { ChangeRole } from "../models.barel";
+import { UserService } from '../_services/user.services';
+import { ChangeRole } from '../models.barel';
 import { NgForm, FormGroup, FormControl, FormArray, Validators} from '@angular/forms';
 
 @Component({

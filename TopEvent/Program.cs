@@ -35,6 +35,7 @@ namespace TopEvent
 
         public static IWebHost CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseIISIntegration()
                 .UseStartup<Startup>().Build();
     }
 }

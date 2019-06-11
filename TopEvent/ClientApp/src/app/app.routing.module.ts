@@ -1,15 +1,26 @@
 import { NgModule } from '@angular/core';
-import { Route, RouterModule } from "@angular/router";
-
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { AuthGuard } from "./_guards/auth.guard";
+import { Route, RouterModule } from '@angular/router';
+import { AuthGuard } from './_guards/auth.guard';
 
 const router: Route[] = [
-  { path: '', component: HomeComponent, pathMatch: 'full', canActivate: [AuthGuard] },
-  { path: 'counter', component: CounterComponent, canActivate: [AuthGuard] },
-  { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthGuard] }
+  {
+    path: '',
+    pathMatch: 'full',
+    loadChildren: './layaout/master/master.module#MasterModule',
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'error',
+    loadChildren: './layaout/master-error/master-error.module#MasterErrorModule',
+  },
+  {
+    path: 'login',
+    loadChildren: './layaout/master-login/master-login.module#MasterLoginModule',
+  },
+  {
+    path: 'register',
+    loadChildren: './layaout/master-register/master-register.module#MasterRegisterModule',
+  }
 ];
 
 

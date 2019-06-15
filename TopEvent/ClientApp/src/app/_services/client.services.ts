@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User, Client } from "../models.barel";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ClientService {
 
   constructor(private http: HttpClient) { }

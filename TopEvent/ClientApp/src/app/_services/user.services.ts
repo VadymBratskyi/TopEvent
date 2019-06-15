@@ -4,7 +4,9 @@ import { User, UserEdit, UserCreate, UserChangePassword, ChangeRole } from "../m
 import { environment } from "../../environments/environment";
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class UserService {
 
   private CurrentUser: User;

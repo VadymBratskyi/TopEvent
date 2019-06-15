@@ -6,7 +6,9 @@ import { UserService } from './user.services';
 import { environment } from "../../environments/environment";
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthenticationService {
 
   constructor(

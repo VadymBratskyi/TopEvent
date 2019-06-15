@@ -12,3 +12,17 @@ C:\GitHub\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Model.pdb
 C:\GitHub\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.csproj.CopyComplete
 C:\GitHub\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.dll
 C:\GitHub\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.pdb
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Common.deps.json
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Common.dll
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Common.pdb
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.DAL.dll
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Model.dll
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.DAL.pdb
+C:\GithubProject\TopEvent\TopEvent.Common\bin\Debug\netcoreapp2.2\TopEvent.Model.pdb
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.csprojAssemblyReference.cache
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.csproj.CoreCompileInputs.cache
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.AssemblyInfoInputs.cache
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.AssemblyInfo.cs
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.csproj.CopyComplete
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.dll
+C:\GithubProject\TopEvent\TopEvent.Common\obj\Debug\netcoreapp2.2\TopEvent.Common.pdb

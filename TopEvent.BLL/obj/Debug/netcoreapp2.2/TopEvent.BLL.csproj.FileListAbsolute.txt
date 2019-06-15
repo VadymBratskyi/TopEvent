@@ -16,3 +16,12 @@ C:\GitHub\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.AssemblyInf
 C:\GitHub\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.dll
 C:\GitHub\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.pdb
 C:\GitHub\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.csprojAssemblyReference.cache
+C:\GithubProject\TopEvent\TopEvent.BLL\bin\Debug\netcoreapp2.2\TopEvent.BLL.deps.json
+C:\GithubProject\TopEvent\TopEvent.BLL\bin\Debug\netcoreapp2.2\TopEvent.BLL.dll
+C:\GithubProject\TopEvent\TopEvent.BLL\bin\Debug\netcoreapp2.2\TopEvent.BLL.pdb
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.csprojAssemblyReference.cache
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.csproj.CoreCompileInputs.cache
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.AssemblyInfoInputs.cache
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.AssemblyInfo.cs
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.dll
+C:\GithubProject\TopEvent\TopEvent.BLL\obj\Debug\netcoreapp2.2\TopEvent.BLL.pdb

@@ -24,7 +24,7 @@ export class UserCardComponent implements OnInit {
 
   signOut() {
     this.servAuthentication.logout().subscribe(rez => {
-      this.router.navigate(['/users', 'login']);
+      this.router.navigate(['/login']);
     });
   }
 

@@ -5,8 +5,14 @@ import { MasterComponent } from './master.component';
 const routes: Routes = [
   {
     path: '',
-    component: MasterComponent
-  }
+    component: MasterComponent,
+    children: [
+      {
+        path: 'administrations',
+        loadChildren: () => import('../../administrations/administrations.module').then(u => u.AdministrationsModule)
+      }
+    ]
+  }  
 ];
 
 @NgModule({

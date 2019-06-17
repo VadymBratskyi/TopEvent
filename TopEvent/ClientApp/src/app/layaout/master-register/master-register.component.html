@@ -1,3 +1,71 @@
-<p>
-  master-register works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col padd-col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Welcome to us</mat-card-title>
+          <mat-card-subtitle>Register please</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="example-form" [formGroup]="registerForm">
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="name" placeholder="Name" />
+              <mat-error *ngIf="registerForm.controls['name'].invalid">{{getErrorMessage(registerForm.controls['name'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="thurname" placeholder="Thurname" />
+              <mat-error *ngIf="registerForm.controls['thurname'].invalid">{{getErrorMessage(registerForm.controls['thurname'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="patronymic" placeholder="Patronymic" />
+              <mat-error *ngIf="registerForm.controls['patronymic'].invalid">{{getErrorMessage(registerForm.controls['patronymic'])}}</mat-error>
+            </mat-form-field>
+                     
+            <mat-form-field class="example-full-width">
+              <input matInput [matDatepicker]="picker" formControlName="birthday" placeholder="Birthday">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="registerForm.controls['birthday'].invalid">{{getErrorMessage(registerForm.controls['birthday'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="phonenumber" placeholder="Phonenumber" />
+              <mat-error *ngIf="registerForm.controls['phonenumber'].invalid">{{getErrorMessage(registerForm.controls['phonenumber'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="email" placeholder="Email" />
+              <mat-error *ngIf="registerForm.controls['email'].invalid">{{getErrorMessage(registerForm.controls['email'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="password" placeholder="Password" [type]="hideP ? 'password' : 'text'" />
+              <button mat-icon-button matSuffix (click)="hideP = !hideP" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hideP">
+                <mat-icon>{{hideP ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="registerForm.controls['password'].invalid">{{getErrorMessage(registerForm.controls['password'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput formControlName="passwordConfirm" placeholder="Confirm password" [type]="hidePC ? 'password' : 'text'" />
+              <button mat-icon-button matSuffix (click)="hidePC = !hidePC" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePC">
+                <mat-icon>{{hidePC ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="registerForm.controls['passwordConfirm'].invalid">{{getErrorMessage(registerForm.controls['passwordConfirm'])}}</mat-error>
+            </mat-form-field>
+
+          </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="register()" [disabled]="registerForm.invalid">Register</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+          <button mat-button [routerLink]="['/login']">Cancel</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

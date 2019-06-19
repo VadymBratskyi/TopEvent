@@ -1,0 +1,14 @@
+C:\GithubProject\TopEvent\IdentityService\bin\Debug\netcoreapp2.2\IdentityService.deps.json
+C:\GithubProject\TopEvent\IdentityService\bin\Debug\netcoreapp2.2\IdentityService.runtimeconfig.json
+C:\GithubProject\TopEvent\IdentityService\bin\Debug\netcoreapp2.2\IdentityService.runtimeconfig.dev.json
+C:\GithubProject\TopEvent\IdentityService\bin\Debug\netcoreapp2.2\IdentityService.dll
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.csprojAssemblyReference.cache
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.csproj.CoreCompileInputs.cache
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.RazorAssemblyInfo.cache
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.RazorAssemblyInfo.cs
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.AssemblyInfoInputs.cache
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.AssemblyInfo.cs
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.RazorTargetAssemblyInfo.cache
+C:\GithubProject\TopEvent\IdentityService\bin\Debug\netcoreapp2.2\IdentityService.pdb
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.dll
+C:\GithubProject\TopEvent\IdentityService\obj\Debug\netcoreapp2.2\IdentityService.pdb

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityService.Data;
+using IdentityService.Data.Models;
 using IdentityService.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +36,15 @@ namespace IdentityService
                 options.UseSqlServer(connection, m => m.MigrationsAssembly("MyTopEventMigration"));
             });
 
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
+                .AddRoleManager<ApplicationRoleManager>()
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+            // .AddDefaultTokenProviders()
+            // .AddClaimsPrincipalFactory<ApplicationUserClaimsPrincipalFactory>();
+
+            services.AddCors();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
@@ -61,7 +71,6 @@ namespace IdentityService
                         };
                     });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,6 +89,7 @@ namespace IdentityService
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
+
             app.UseMvc();
         }
     }

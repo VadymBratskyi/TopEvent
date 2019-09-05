@@ -10,6 +10,12 @@ namespace IdentityService.Controllers
     [Route("api/[controller]")]
     public class TestController : Controller
     {
+        [HttpGet("[action]")]
+        public IActionResult GetTest()
+        {
+            return Ok($"Hello World");
+        }
+
         [Authorize]
         [Route("getlogin")]
         public IActionResult GetLogin()

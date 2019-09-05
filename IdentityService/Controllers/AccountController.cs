@@ -20,6 +20,15 @@ namespace IdentityService.Controllers
             new Person { Login="qwerty", Password="55555", Role = "user" }
         };
 
+
+        [HttpGet("/gettoken")]
+        public async Task GetToken() {
+            people.ForEach(async t =>
+            {
+                await HttpContext.Response.WriteAsync(t.Login);
+            });            
+        }
+
         [HttpPost("/token")]
         public async Task Token()
         {

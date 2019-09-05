@@ -21,6 +21,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ChangePasswordViewModel.ts">
+      <CustomToolNamespace>ViewModels\ChangePasswordViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="ChangeRoleViewModel.ts">
+      <CustomToolNamespace>ViewModels\ChangeRoleViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="CreateUserViewModel.ts">
+      <CustomToolNamespace>ViewModels\CreateUserViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="EditUserViewModel.ts">
+      <CustomToolNamespace>ViewModels\EditUserViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="LoginViewModel.ts">
+      <CustomToolNamespace>ViewModels\LoginViewModel.cs</CustomToolNamespace>
+    </None>
+    <None Update="RegisterViewModel.ts">
+      <CustomToolNamespace>ViewModels\RegisterViewModel.cs</CustomToolNamespace>
+    </None>
     <None Update="ViewModels\LoginViewModel.cs.d.ts">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

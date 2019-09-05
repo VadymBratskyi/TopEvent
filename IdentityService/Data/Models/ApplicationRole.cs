@@ -8,5 +8,7 @@ namespace IdentityService.Data.Models
 {
     public class ApplicationRole : IdentityRole<Guid>
     {
+        public ApplicationRole(string roleName) : base(roleName) { }
+
     }
 }

@@ -8,7 +8,7 @@ using TopEvent.Model.Models;
 
 namespace TopEvent.DAL.EF
 {
-    public sealed class EventDbContext : IdentityDbContext<User, Role, Guid>
+    public sealed class EventDbContext : DbContext
     {
         public EventDbContext(DbContextOptions<EventDbContext> options) : base(options)
         {

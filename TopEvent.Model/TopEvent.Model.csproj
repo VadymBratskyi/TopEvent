@@ -10,10 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Models\User.cs">
-      <Generator>DtsGenerator</Generator>
-      <LastGenOutput>User.cs.d.ts</LastGenOutput>
-    </Compile>
     <Compile Update="ViewModels\LoginViewModel.cs">
       <Generator>DtsGenerator</Generator>
       <LastGenOutput>LoginViewModel.cs.d.ts</LastGenOutput>

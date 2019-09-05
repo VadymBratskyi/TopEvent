@@ -2,31 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using IdentityService.Data.Models;
 using Microsoft.AspNetCore.Identity;
-using TopEvent.Model.Models;
 
-namespace TopEvent.DAL.Initiliztion
+
+namespace IdentityService.Models
 {
     public class RoleInitializer
     {
-        public static async Task InitializerAsync(UserManager<User> userManager, RoleManager<Role> roleManager)
+        public static async Task InitializerAsync(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
         {
             string vadosEmail = "vadymbratskyi@gmail.com";
             string password = "P@ssw0rd123";
 
             if (await roleManager.FindByNameAsync(vadosEmail) == null)
             {
-                await roleManager.CreateAsync(new Role("bossVados"));
+                await roleManager.CreateAsync(new ApplicationRole("bossVados"));
             }
 
             if (await roleManager.FindByNameAsync("user") == null)
             {
-                await roleManager.CreateAsync(new Role("user"));
+                await roleManager.CreateAsync(new ApplicationRole("user"));
             }
 
             if (await userManager.FindByNameAsync(vadosEmail) == null)
             {
-                User bosVados = new User{Email = vadosEmail, UserName = vadosEmail };
+                ApplicationUser bosVados = new ApplicationUser { Email = vadosEmail, UserName = vadosEmail };
                 IdentityResult result = await userManager.CreateAsync(bosVados, password);
                 if (result.Succeeded)
                 {
